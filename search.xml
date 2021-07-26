@@ -38,4 +38,53 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>Linux使用tar打包和解压</title>
+    <url>/2019/09/24/old_website/Linux%E4%BD%BF%E7%94%A8tar%E6%89%93%E5%8C%85%E5%92%8C%E8%A7%A3%E5%8E%8B/</url>
+    <content><![CDATA[<hr>
+<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>打包一个目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zcf ***.tar.gz /path</span><br></pre></td></tr></table></figure>
+
+<p>解压文件到一个目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf ***.tar.gz</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>修改Spring Boot启动时的默认图案Banner</title>
+    <url>/2019/01/18/old_website/%E4%BF%AE%E6%94%B9Spring%20Boot%E5%90%AF%E5%8A%A8%E6%97%B6%E7%9A%84%E9%BB%98%E8%AE%A4%E5%9B%BE%E6%A1%88Banner/</url>
+    <content><![CDATA[<hr>
+<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p><strong>一、替换banner</strong></p>
+<ol>
+<li>在src/main/resources路径下新建一个banner.txt文件，并输入想要的内容。</li>
+<li>可以使用在线生成文字图案的网站生成  <a href="http://patorjk.com/software/taag/">在线生成文字图案</a></li>
+</ol>
+<p><strong>二、关闭banner</strong></p>
+<p>修改main方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//SpringApplication.run(Application.class, args);</span></span><br><span class="line">		SpringApplication newRun= <span class="keyword">new</span> SpringApplication(Application.class); </span><br><span class="line">		newRun.setBannerMode(Banner.Mode.OFF);</span><br><span class="line">		newRun.run(args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>Linux修改SSH默认的22端口及关闭密码认证登录</title>
+    <url>/2021/07/26/Linux%E4%BF%AE%E6%94%B9SSH%E7%AB%AF%E5%8F%A3%E5%8F%8A%E5%85%B3%E9%97%AD%E5%AF%86%E7%A0%81%E8%AE%A4%E8%AF%81%E7%99%BB%E5%BD%95/</url>
+    <content><![CDATA[<hr>
+<h3 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h3><ol>
+<li><p>修改sshd配置</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure></li>
+<li><p>编辑添加新的端口，默认Port=22</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Port=8888</span><br></pre></td></tr></table></figure></li>
+<li><p>重启sshd</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service sshd restart</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="关闭密码登录"><a href="#关闭密码登录" class="headerlink" title="关闭密码登录"></a>关闭密码登录</h3><ol>
+<li><p>修改sshd配置</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure></li>
+<li><p>找到<code>PasswordAuthentication</code>，修改<code>yes</code>为<code>no</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">PasswordAuthentication no</span><br></pre></td></tr></table></figure></li>
+<li><p>重启sshd</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service sshd restart</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+  </entry>
 </search>

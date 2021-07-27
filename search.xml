@@ -1,70 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Win10使用PowerShell首次执行hexo，出现”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“解决办法</title>
-    <url>/2021/07/21/Win10%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%9C%A8%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%A6%81%E6%AD%A2%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<hr>
-<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Win10使用<code>npm</code>安装<code>hexo</code>之后，使用<code>PowerShell</code>执行<code>hexo init blog</code>报错，”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“</p>
-<hr>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
-<li><p>使用<code>Win</code>+<code>i</code>组合键打开设置面板。</p>
-</li>
-<li><p>在搜索框中输入<code>powershell</code>，弹出下拉框。</p>
-</li>
-<li><p>在下拉框中选择”允许本地PowerShell脚本在不签名的情况下运行“，此时会跳转到”开发者选项-&gt;PowerShell-&gt;应用一下设置以执行PowerShell脚本“。</p>
-</li>
-<li><p>下面的复选框会默认打勾（如果没打勾就自己打上），然后点击应用。</p>
-</li>
-<li><p>再次打开<code>PowerShell</code>，成功运行<code>hexo init blog</code>。</p>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/07/21/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Linux使用tar打包和解压</title>
-    <url>/2019/09/24/old_website/Linux%E4%BD%BF%E7%94%A8tar%E6%89%93%E5%8C%85%E5%92%8C%E8%A7%A3%E5%8E%8B/</url>
-    <content><![CDATA[<hr>
-<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>打包一个目录</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zcf ***.tar.gz /path</span><br></pre></td></tr></table></figure>
-
-<p>解压文件到一个目录</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf ***.tar.gz</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>修改Spring Boot启动时的默认图案Banner</title>
-    <url>/2019/01/18/old_website/%E4%BF%AE%E6%94%B9Spring%20Boot%E5%90%AF%E5%8A%A8%E6%97%B6%E7%9A%84%E9%BB%98%E8%AE%A4%E5%9B%BE%E6%A1%88Banner/</url>
-    <content><![CDATA[<hr>
-<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p><strong>一、替换banner</strong></p>
-<ol>
-<li>在src/main/resources路径下新建一个banner.txt文件，并输入想要的内容。</li>
-<li>可以使用在线生成文字图案的网站生成  <a href="http://patorjk.com/software/taag/">在线生成文字图案</a></li>
-</ol>
-<p><strong>二、关闭banner</strong></p>
-<p>修改main方法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//SpringApplication.run(Application.class, args);</span></span><br><span class="line">		SpringApplication newRun= <span class="keyword">new</span> SpringApplication(Application.class); </span><br><span class="line">		newRun.setBannerMode(Banner.Mode.OFF);</span><br><span class="line">		newRun.run(args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
     <title>Linux修改SSH默认的22端口及关闭密码认证登录</title>
     <url>/2021/07/26/Linux%E4%BF%AE%E6%94%B9SSH%E7%AB%AF%E5%8F%A3%E5%8F%8A%E5%85%B3%E9%97%AD%E5%AF%86%E7%A0%81%E8%AE%A4%E8%AF%81%E7%99%BB%E5%BD%95/</url>
     <content><![CDATA[<hr>
@@ -85,6 +21,81 @@
 <li><p>重启sshd</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service sshd restart</span><br></pre></td></tr></table></figure></li>
 </ol>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>SSH</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/07/21/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Win10使用PowerShell首次执行hexo，出现”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“解决办法</title>
+    <url>/2021/07/21/Win10%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%9C%A8%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%A6%81%E6%AD%A2%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<hr>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Win10使用<code>npm</code>安装<code>hexo</code>之后，使用<code>PowerShell</code>执行<code>hexo init blog</code>报错，”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“</p>
+<hr>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
+<li><p>使用<code>Win</code>+<code>i</code>组合键打开设置面板。</p>
+</li>
+<li><p>在搜索框中输入<code>powershell</code>，弹出下拉框。</p>
+</li>
+<li><p>在下拉框中选择”允许本地PowerShell脚本在不签名的情况下运行“，此时会跳转到”开发者选项-&gt;PowerShell-&gt;应用一下设置以执行PowerShell脚本“。</p>
+</li>
+<li><p>下面的复选框会默认打勾（如果没打勾就自己打上），然后点击应用。</p>
+</li>
+<li><p>再次打开<code>PowerShell</code>，成功运行<code>hexo init blog</code>。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux使用tar打包和解压</title>
+    <url>/2019/09/24/old_website/Linux%E4%BD%BF%E7%94%A8tar%E6%89%93%E5%8C%85%E5%92%8C%E8%A7%A3%E5%8E%8B/</url>
+    <content><![CDATA[<hr>
+<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>打包一个目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zcf ***.tar.gz /path</span><br></pre></td></tr></table></figure>
+
+<p>解压文件到一个目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf ***.tar.gz</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>SSH</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>修改Spring Boot启动时的默认图案Banner</title>
+    <url>/2019/01/18/old_website/%E4%BF%AE%E6%94%B9Spring%20Boot%E5%90%AF%E5%8A%A8%E6%97%B6%E7%9A%84%E9%BB%98%E8%AE%A4%E5%9B%BE%E6%A1%88Banner/</url>
+    <content><![CDATA[<hr>
+<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p><strong>一、替换banner</strong></p>
+<ol>
+<li>在src/main/resources路径下新建一个banner.txt文件，并输入想要的内容。</li>
+<li>可以使用在线生成文字图案的网站生成  <a href="http://patorjk.com/software/taag/">在线生成文字图案</a></li>
+</ol>
+<p><strong>二、关闭banner</strong></p>
+<p>修改main方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//SpringApplication.run(Application.class, args);</span></span><br><span class="line">		SpringApplication newRun= <span class="keyword">new</span> SpringApplication(Application.class); </span><br><span class="line">		newRun.setBannerMode(Banner.Mode.OFF);</span><br><span class="line">		newRun.run(args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
 </search>

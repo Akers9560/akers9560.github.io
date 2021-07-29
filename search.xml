@@ -21,11 +21,11 @@
   <entry>
     <title>Win10使用PowerShell首次执行hexo，出现”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“解决办法</title>
     <url>/2021/07/21/Win10%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%9C%A8%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%A6%81%E6%AD%A2%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<hr>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Win10使用<code>npm</code>安装<code>hexo</code>之后，使用<code>PowerShell</code>执行<code>hexo init blog</code>报错，”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“</p>
 <hr>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
-<li><p>使用<code>Win</code>+<code>i</code>组合键打开设置面板。</p>
+<li><p>使用 <kbd>Win</kbd>+<kbd>I</kbd> 组合键打开设置面板。</p>
 </li>
 <li><p>在搜索框中输入<code>powershell</code>，弹出下拉框。</p>
 </li>
@@ -44,7 +44,9 @@
   <entry>
     <title>Ubuntu20.04开机启动时出现A start job is running for wait for network to be Configured长时间等待的解决办法</title>
     <url>/2021/07/28/Ubuntu20.04%E5%90%AF%E5%8A%A8%E6%97%B6%E7%BD%91%E7%BB%9C%E9%95%BF%E6%97%B6%E9%97%B4%E7%AD%89%E5%BE%85%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>官方Ubuntu20.04安装完成之后，开机启动时出现A start job is running for wait for network to be Configured (10s / no limit)，会造成长时间等待，开机时间过长。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>官方Ubuntu20.04安装完成之后，开机启动时出现A start job is running for wait for network to be Configured (10s / no limit)，会造成长时间等待，开机时间过长。</p>
+<hr>
 <h3 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h3><ol>
 <li>系统启动，如果没有接入网线或者网线没有插好，会导致获取不了网络长时间等待</li>
 <li>新增加了网口配置，但是配置错误；或者新增加的网口对应的网线不通</li>
@@ -181,6 +183,7 @@
 <li><p>启动之后经过短暂的加载页面，可以看到如下界面，目录也在当前目录下<br><img src="omni-regtest-homepage.png" alt="Bitcoin regtest页面"><br><img src="omni-regtest-dir.png" alt="Bitcoin regtest目录"></p>
 </li>
 </ol>
+<hr>
 <h3 id="如何模拟BTC挖矿"><a href="#如何模拟BTC挖矿" class="headerlink" title="如何模拟BTC挖矿"></a>如何模拟BTC挖矿</h3><ol>
 <li><p>打开<code>OmniCore</code>的控制台，窗口-&gt;控制台</p>
 </li>
@@ -193,6 +196,7 @@
 <p><img src="omni-regtest-generatetoaddress.png" alt="Bitcoin regtest手动挖101个块"><br>此时切换到概况页面可以看到有50BTC，这50BTC就是挖的第一个块的奖励<br><img src="omni-regtest-homepagebalance.png" alt="Bitcoin regtest首页查看余额"></p>
 </li>
 </ol>
+<hr>
 <h3 id="如何模拟发布USDT代币（Token）"><a href="#如何模拟发布USDT代币（Token）" class="headerlink" title="如何模拟发布USDT代币（Token）"></a>如何模拟发布USDT代币（Token）</h3><ol>
 <li><p>为了区分，再创建一个新的地址</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">getnewaddress</span><br></pre></td></tr></table></figure>

@@ -166,4 +166,72 @@
         <category>Ubuntu</category>
       </categories>
   </entry>
+  <entry>
+    <title>搭建Omni（USDT）本地测试环境，并模拟发布USDT代币</title>
+    <url>/2021/07/29/old_website/%E6%90%AD%E5%BB%BAOmni%EF%BC%88USDT%EF%BC%89%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="运行Omni钱包Regtest（本地测试环境）节点"><a href="#运行Omni钱包Regtest（本地测试环境）节点" class="headerlink" title="运行Omni钱包Regtest（本地测试环境）节点"></a>运行Omni钱包Regtest（本地测试环境）节点</h3><p>文章基于<code>Windows10</code>系统上运行<code>Omnicore</code>，其它系统同理</p>
+<ol>
+<li><p>下载<code>Omnicore</code>，解压</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="function">https://<span class="title">github.com</span>/<span class="title">OmniLayer</span>/<span class="title">omnicore</span>/<span class="title">releases</span>/<span class="title">download</span>/<span class="title">v0</span>.11.0/<span class="title">omnicore</span>-0.11.0-<span class="title">win64.zip</span></span></span><br></pre></td></tr></table></figure></li>
+<li><p>进入到目录下</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\Users\Administrator\Downloads\omnicore-<span class="number">0</span>.<span class="number">11</span>.<span class="number">0</span>\bin</span><br></pre></td></tr></table></figure></li>
+<li><p>运行本地测试节点</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">omnicore-qt.exe -datadir=./ -rpcuser=rpcuser123 -rpcpassword=password123 -server=<span class="number">1</span> -rpcallowip=<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>/<span class="number">0</span> -port=<span class="number">18444</span> -rpcport=<span class="number">10332</span> -listen -chain=regtest -fallbackfee=<span class="number">0</span>.<span class="number">00001</span></span><br><span class="line">#-rpcuser=&lt;user&gt; 设置JSON-RPC连接认证的用户</span><br><span class="line">#-rpcpassword=&lt;pw&gt; 设置JSON-RPC连接认证的密码</span><br><span class="line">#-server 开启命令行和JSON-RPC调用</span><br><span class="line">#-datadir=&lt;<span class="built_in">dir</span>&gt; 数据存放目录，相对目录时请使用`<span class="built_in">CMD</span>`工具，`Power Shell`无法使用相对路径运行</span><br><span class="line">#-rpcallowip=<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>/<span class="number">0</span> 设置允许JSON-RPC调用的IP，这里测试网络设置的<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>/<span class="number">0</span>，正式网络谨慎使用</span><br><span class="line">#-port=<span class="number">18444</span> 节点网络监听端口</span><br><span class="line">#-rpcport=<span class="number">18443</span> 节点JSON-RPC监听端口</span><br><span class="line">#-listen 允许外部连接，使用多节点时需要开启</span><br><span class="line">#-chain=regtest 指定为本地测试环境，不指定默认为主网</span><br><span class="line">#-fallbackfee=<span class="number">0</span>.<span class="number">00001</span></span><br></pre></td></tr></table></figure></li>
+<li><p>启动之后经过短暂的加载页面，可以看到如下界面，目录也在当前目录下<br><img src="omni-regtest-homepage.png" alt="Bitcoin regtest页面"><br><img src="omni-regtest-dir.png" alt="Bitcoin regtest目录"></p>
+</li>
+</ol>
+<h3 id="如何模拟BTC挖矿"><a href="#如何模拟BTC挖矿" class="headerlink" title="如何模拟BTC挖矿"></a>如何模拟BTC挖矿</h3><ol>
+<li><p>打开<code>OmniCore</code>的控制台，窗口-&gt;控制台</p>
+</li>
+<li><p>生成一个地址用来存放挖矿收益</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">getnewaddress</span><br></pre></td></tr></table></figure>
+<p><img src="omni-regtest-getnewaddress.png" alt="Bitcoin regtest获取一个新的地址"></p>
+</li>
+<li><p>开始手动挖矿，新挖出的BTC在可以使用前必须经过101个区块确认的成熟过程</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">generatetoaddress <span class="number">101</span> <span class="number">2</span>NDNJ4EHMKreNXXpFknqFWU6sjxNQemZrvN</span><br></pre></td></tr></table></figure>
+<p><img src="omni-regtest-generatetoaddress.png" alt="Bitcoin regtest手动挖101个块"><br>此时切换到概况页面可以看到有50BTC，这50BTC就是挖的第一个块的奖励<br><img src="omni-regtest-homepagebalance.png" alt="Bitcoin regtest首页查看余额"></p>
+</li>
+</ol>
+<h3 id="如何模拟发布USDT代币（Token）"><a href="#如何模拟发布USDT代币（Token）" class="headerlink" title="如何模拟发布USDT代币（Token）"></a>如何模拟发布USDT代币（Token）</h3><ol>
+<li><p>为了区分，再创建一个新的地址</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">getnewaddress</span><br></pre></td></tr></table></figure>
+<p><img src="omni-regtest-getnewaddress2.png" alt="Bitcoin regtest获取一个新的地址"></p>
+</li>
+<li><p>往新地址发送10个BTC</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">sendtoaddress <span class="number">2</span>NAZiD97N1WsJpQhw1z6n798NekdhycWHzY <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<p><img src="omni-regtest-sendtoaddress.png" alt="Bitcoin regtest发送10个BTC"><br>手动挖一个块，确认这笔交易</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">generatetoaddress <span class="number">1</span> <span class="number">2</span>NDNJ4EHMKreNXXpFknqFWU6sjxNQemZrvN</span><br></pre></td></tr></table></figure></li>
+<li><p>创建一个可管理的Token，记住返回的交易哈希</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">omni_sendissuancemanaged &quot;<span class="number">2</span>NAZiD97N1WsJpQhw1z6n798NekdhycWHzY&quot; <span class="number">1</span> <span class="number">2</span> <span class="number">0</span> &quot;Financial and insurance activities&quot; &quot;Activities auxiliary to financial service and insurance activities&quot; &quot;TetherUS&quot; &quot;https://tether.to&quot; &quot;The next paradigm of money.&quot; </span><br></pre></td></tr></table></figure>
+<p><img src="omni-regtest-sendissuancemanaged.png" alt="Bitcoin regtest创建一个Token"><br>手动挖一个块，确认这笔交易</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">generatetoaddress <span class="number">1</span> <span class="number">2</span>NDNJ4EHMKreNXXpFknqFWU6sjxNQemZrvN</span><br></pre></td></tr></table></figure></li>
+<li><p>获取这笔交易，都是创建的Token的详情，记住下面的<code>propertyid</code>，此处为<code>3</code></p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">omni_gettransaction <span class="number">81</span>f7a3408bb01fc41bdfb697403a493f1b601f7223be72ae2776df60baf8d54f</span><br></pre></td></tr></table></figure>
+<p><img src="omni-regtest-omnigettokentransaction.png" alt="Bitcoin regtest获取token详情"></p>
+</li>
+<li><p>使用创建Token的地址发行代币，下面的<code>&quot;&quot;</code>表示发行到哪个地址，空表示发行到自己，此处即<code>2NAZiD97N1WsJpQhw1z6n798NekdhycWHzY</code>，<code>3</code>就是上一个步骤的<code>propertyid</code>，<code>10000</code>是发行数量</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">omni_sendgrant <span class="number">2</span>NAZiD97N1WsJpQhw1z6n798NekdhycWHzY &quot;&quot; <span class="number">3</span> <span class="number">10000</span> &quot;First&quot;</span><br></pre></td></tr></table></figure>
+<p>手动挖一个块，确认这笔交易</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">generatetoaddress <span class="number">1</span> <span class="number">2</span>NDNJ4EHMKreNXXpFknqFWU6sjxNQemZrvN</span><br></pre></td></tr></table></figure>
+<p>此时查看发行地址<code>2NAZiD97N1WsJpQhw1z6n798NekdhycWHzY</code>，已经有<code>10000</code>余额</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">omni_getbalance <span class="number">2</span>NAZiD97N1WsJpQhw1z6n798NekdhycWHzY <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p><img src="omni-regtest-omnigetbalance.png" alt="Bitcoin regtest查看发行地址余额"></p>
+</li>
+<li><p>此时可以将代币发送到其它地址</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">omni_send <span class="number">2</span>NAZiD97N1WsJpQhw1z6n798NekdhycWHzY <span class="number">2</span>NDNJ4EHMKreNXXpFknqFWU6sjxNQemZrvN <span class="number">3</span> <span class="number">100</span></span><br></pre></td></tr></table></figure>
+<p>手动挖一个块，确认这笔交易</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">generatetoaddress <span class="number">1</span> <span class="number">2</span>NDNJ4EHMKreNXXpFknqFWU6sjxNQemZrvN</span><br></pre></td></tr></table></figure>
+<p>查询余额</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">omni_getbalance <span class="number">2</span>NDNJ4EHMKreNXXpFknqFWU6sjxNQemZrvN <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p><img src="omni-regtest-omnigetbalance2.png" alt="Bitcoin regtest查看接收地址余额"></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>BlockChain</category>
+        <category>Bitcoin</category>
+        <category>Omni</category>
+      </categories>
+  </entry>
 </search>

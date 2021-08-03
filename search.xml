@@ -307,4 +307,39 @@
         <category>Docker</category>
       </categories>
   </entry>
+  <entry>
+    <title>如何使用 Markdown 编写技术文档</title>
+    <url>/2021/08/03/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20Markdown%20%E7%BC%96%E5%86%99%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p><a href="https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hans">如何使用 Markdown 编写技术文档</a> </p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Win10系统下使用telnet命令ping远程端口</title>
+    <url>/2021/08/03/Win10%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8telnet%E5%91%BD%E4%BB%A4ping%E8%BF%9C%E7%A8%8B%E7%AB%AF%E5%8F%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><blockquote>
+<p>在<code>Win10</code>系统下，使用<code>ping</code>命令只能查看<code>80</code>端口通不通，如果要查看别的端口，就需要用到<code>telnet</code>命令。默认情况下，<code>telnet</code>命令是没有开启的，需要先启动这个命令</p>
+</blockquote>
+<hr>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="打开系统的telnet命令"><a href="#打开系统的telnet命令" class="headerlink" title="打开系统的telnet命令"></a>打开系统的<code>telnet</code>命令</h3><ol>
+<li>右键<code>开始</code>菜单，选择<code>文件资源管理器</code>，在搜索框内输入<code>控制面板\程序\程序和功能</code>进入到<code>程序和功能窗口</code><br><img src="win10_telnet_search.png" alt="文件资源管理器"></li>
+<li>点击<code>启用或关闭Windows功能</code><br><img src="win10_telnet_click_enable_and_disable.png" alt="启用或关闭Windows功能"></li>
+<li>在弹出的<code>Windows</code>功能窗口中，找到<code>Telnet客户端</code>，并勾选复选框<br><img src="win10_telnet_click_operation.png" alt="勾选Telnet客户端"></li>
+<li>系统搜索需要等待一会儿，完成之后点击<code>关闭</code>即可<br><img src="win10_telnet_click_waiting.png" alt="勾选Telnet客户端"></li>
+</ol>
+<h3 id="使用telnet命令"><a href="#使用telnet命令" class="headerlink" title="使用telnet命令"></a>使用<code>telnet</code>命令</h3><ol>
+<li>右键<code>开始</code>菜单，选择<code>Windows PowerShell(管理员)</code>打开<code>PowerShell</code>命令行</li>
+<li>现在使用<code>telnet</code>测试一下远程<code>443</code>端口<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">telnet &lt;ip&gt; &lt;port&gt;</span><br></pre></td></tr></table></figure>
+<img src="win10_telnet_baidu_443.png" alt="Telnet百度443"></li>
+<li>如果成功，<code>PowerShell</code>窗口会变空白，标题会变成<code>Telnet 远程的ip</code>，内容的首个字符会有个光标一直闪烁。多按几次<code>回车</code>可退出<code>telnet</code>模式<br><img src="win10_telnet_baidu_443_result.png" alt="Telnet百度443结果"></li>
+<li>如果失败，<code>PowerShell</code>会一直显示<code>正在连接xxx.xxx.xxx.xxx...</code>，随后显示连接失败<br><img src="win10_telnet_google_443_fail.png" alt="Telnet谷歌443结果"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Windows</category>
+        <category>Tools</category>
+      </categories>
+  </entry>
 </search>

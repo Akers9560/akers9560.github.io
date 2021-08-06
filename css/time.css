@@ -41,8 +41,12 @@
 }
 
 @media(max-width: 500px){
-    time{
-     font-size: 4rem;
+    #time1000{
+     font-size: 2rem;
     }
-    
+
+    .live2d-widget-container{
+        right: 0 !important;
+        bottom: -14px !important;
+    }
 }

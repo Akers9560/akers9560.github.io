@@ -98,7 +98,7 @@ fetchQuote = async () => {
 //fetching data for weather
 fetchWeather = async () => {
     try{
-        const res2 = await fetch(`https://api.seniverse.com/v3/weather/now.json?key=SzOUZCVYegf6dgGO-&location=beijing&language=zh-Hans&unit=c`)
+        const res2 = await fetch(`https://cdn.weather.hao.360.cn/sed_api_weather_info.php?code=`)
         const data2 = await res2.json();
         const {apparentTemperature, summary} = data2.currently;
         Weather.textContent = `Current weather: ${apparentTemperature} Degrees F    ${summary}`
@@ -129,7 +129,5 @@ fetchWeather = async () => {
 
 
 //fetchMeme()
-fetchWeather()
-fetchQuote()
 showTime()
 setBackground()

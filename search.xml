@@ -1,8 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Win10系统下使用telnet命令ping远程端口</title>
+    <url>/2021/08/03/abp0011</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><blockquote>
+<p>在<code>Win10</code>系统下，使用<code>ping</code>命令只能查看<code>80</code>端口通不通，如果要查看别的端口，就需要用到<code>telnet</code>命令。默认情况下，<code>telnet</code>命令是没有开启的，需要先启动这个命令</p>
+</blockquote>
+<hr>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="打开系统的telnet命令"><a href="#打开系统的telnet命令" class="headerlink" title="打开系统的telnet命令"></a>打开系统的<code>telnet</code>命令</h3><ol>
+<li>右键<code>开始</code>菜单，选择<code>文件资源管理器</code>，在搜索框内输入<code>控制面板\程序\程序和功能</code>进入到<code>程序和功能窗口</code><br><img src="win10_telnet_search.png" alt="文件资源管理器"></li>
+<li>点击<code>启用或关闭Windows功能</code><br><img src="win10_telnet_click_enable_and_disable.png" alt="启用或关闭Windows功能"></li>
+<li>在弹出的<code>Windows</code>功能窗口中，找到<code>Telnet客户端</code>，并勾选复选框<br><img src="win10_telnet_click_operation.png" alt="勾选Telnet客户端"></li>
+<li>系统搜索需要等待一会儿，完成之后点击<code>关闭</code>即可<br><img src="win10_telnet_click_waiting.png" alt="勾选Telnet客户端"></li>
+</ol>
+<h3 id="使用telnet命令"><a href="#使用telnet命令" class="headerlink" title="使用telnet命令"></a>使用<code>telnet</code>命令</h3><ol>
+<li>右键<code>开始</code>菜单，选择<code>Windows PowerShell(管理员)</code>打开<code>PowerShell</code>命令行</li>
+<li>现在使用<code>telnet</code>测试一下远程<code>443</code>端口<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">telnet &lt;ip&gt; &lt;port&gt;</span><br></pre></td></tr></table></figure>
+<img src="win10_telnet_baidu_443.png" alt="Telnet百度443"></li>
+<li>如果成功，<code>PowerShell</code>窗口会变空白，标题会变成<code>Telnet 远程的ip</code>，内容的首个字符会有个光标一直闪烁。多按几次<code>回车</code>可退出<code>telnet</code>模式<br><img src="win10_telnet_baidu_443_result.png" alt="Telnet百度443结果"></li>
+<li>如果失败，<code>PowerShell</code>会一直显示<code>正在连接xxx.xxx.xxx.xxx...</code>，随后显示连接失败<br><img src="win10_telnet_google_443_fail.png" alt="Telnet谷歌443结果"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Windows</category>
+        <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Win10使用PowerShell首次执行hexo，出现”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“解决办法</title>
+    <url>/2021/07/21/abp0010</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
+<p>Win10使用<code>npm</code>安装<code>hexo</code>之后，使用<code>PowerShell</code>执行<code>hexo init blog</code>报错，”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“</p>
+</blockquote>
+<hr>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
+<li><p>使用 <kbd>Win</kbd>+<kbd>I</kbd> 组合键打开设置面板。</p>
+</li>
+<li><p>在搜索框中输入<code>powershell</code>，弹出下拉框。</p>
+</li>
+<li><p>在下拉框中选择”允许本地PowerShell脚本在不签名的情况下运行“，此时会跳转到”开发者选项-&gt;PowerShell-&gt;应用一下设置以执行PowerShell脚本“。</p>
+</li>
+<li><p>下面的复选框会默认打勾（如果没打勾就自己打上），然后点击应用。</p>
+</li>
+<li><p>再次打开<code>PowerShell</code>，成功运行<code>hexo init blog</code>。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>如何使用 Markdown 编写技术文档</title>
+    <url>/2021/08/03/abp0012</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p><a href="https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hans">如何使用 Markdown 编写技术文档</a> </p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Chia正式网络水龙头免费领取XCH</title>
+    <url>/2021/08/10/abp0004</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ul>
+<li><p>Chia正式网络水龙头<br><a href="https://faucet.chia.net/">https://faucet.chia.net/</a></p>
+</li>
+<li><p>网站用到Google人机身份验证，可能需要科学上网</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>BlockChain</category>
+        <category>Chia</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Docker的overlay2目录占用大，迁移docker工作目录的方法</title>
+    <url>/2021/08/02/abp0005</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
+<p>在生产环境中，会经常遇到<code>docker</code>容器占用空间过大，系统盘磁盘空间不足的情况，随着使用量越来越大，这种时候仅仅是扩容系统盘已经无法完全解决这个问题，此时就需要挂载一个数据盘，本文挂载到目录<code>/mnt</code>下，然后将<code>docker</code>工作目录迁移到<code>/mnt</code></p>
+</blockquote>
+<hr>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ol>
+<li><p>先查看<code>docker</code>工作目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker info |grep &quot;Docker Root Dir&quot;</span><br></pre></td></tr></table></figure>
+<p>显示</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Docker Root Dir: /var/lib/docker</span><br></pre></td></tr></table></figure></li>
+<li><p>关闭<code>docker</code>服务</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl stop docker.service</span><br></pre></td></tr></table></figure></li>
+<li><p>移动目录到挂载的数据盘<code>/mnt</code>下</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mv /var/lib/docker /mnt/docker</span><br></pre></td></tr></table></figure></li>
+<li><p>修改<code>docker</code>启动配置</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/docker.service</span><br></pre></td></tr></table></figure>
+<p>有些系统是在这个目录下</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi /lib/systemd/system/docker.service</span><br></pre></td></tr></table></figure>
+<p>在<code>ExecStart=/usr/bin/dockerd</code>这行后追加<code>--graph=/mnt/docker</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --graph=/mnt/docker </span><br></pre></td></tr></table></figure></li>
+<li><p>重新加载，重启<code>docker</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl start docker.service</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="Docker的一些其它命令"><a href="#Docker的一些其它命令" class="headerlink" title="Docker的一些其它命令"></a><code>Docker</code>的一些其它命令</h3><blockquote>
+<p>类似于Linux上的df命令，用于查看Docker的磁盘使用情况</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker system df</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>列出所有dangling(虚悬)镜像，也就是 TAG 为 &lt;none&gt; 的</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker images -f dangling=true</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>用于清理磁盘，删除关闭的容器、无用的数据卷和网络，以及dangling(虚悬)镜像</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker system prune</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>清理得更加彻底，可以将没有容器使用Docker镜像都删掉（请慎重操作）</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker system prune -a</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>Docker</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Filecoin(Lotus)测试网络Calibration水龙头免费领取FIL</title>
+    <url>/2021/08/09/abp0006</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ul>
+<li><p>Filecoin(Lotus)测试网络Calibration水龙头<br><a href="https://faucet.calibration.fildev.network/">https://faucet.calibration.fildev.network/</a></p>
+</li>
+<li><p>可能需要科学上网</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>BlockChain</category>
+        <category>Filecoin</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Java逐行读取某个目录下所有文件的内容</title>
-    <url>/2021/08/02/Java%E9%80%90%E8%A1%8C%E8%AF%BB%E5%8F%96%E6%9F%90%E4%B8%AA%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%85%E5%AE%B9/</url>
+    <url>/2021/08/02/abp0007</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
 <p>先获取目录<code>basePath</code>下面的文件名组数，再通过目录+文件名的方式读取每一个文件，最后通过<code>BufferedReader</code>的<code>readLine</code>功能读取文件内容</p>
@@ -17,7 +157,7 @@
   </entry>
   <entry>
     <title>Ubuntu20.04开机启动时出现A start job is running for wait for network to be Configured长时间等待的解决办法</title>
-    <url>/2021/07/28/Ubuntu20.04%E5%90%AF%E5%8A%A8%E6%97%B6%E7%BD%91%E7%BB%9C%E9%95%BF%E6%97%B6%E9%97%B4%E7%AD%89%E5%BE%85%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <url>/2021/07/28/abp0008</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
 <p>官方Ubuntu20.04安装完成之后，开机启动时出现A start job is running for wait for network to be Configured (10s / no limit)，会造成长时间等待，开机时间过长。</p>
@@ -84,33 +224,8 @@
       </categories>
   </entry>
   <entry>
-    <title>Win10使用PowerShell首次执行hexo，出现”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“解决办法</title>
-    <url>/2021/07/21/Win10%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%9C%A8%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%A6%81%E6%AD%A2%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
-<p>Win10使用<code>npm</code>安装<code>hexo</code>之后，使用<code>PowerShell</code>执行<code>hexo init blog</code>报错，”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“</p>
-</blockquote>
-<hr>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
-<li><p>使用 <kbd>Win</kbd>+<kbd>I</kbd> 组合键打开设置面板。</p>
-</li>
-<li><p>在搜索框中输入<code>powershell</code>，弹出下拉框。</p>
-</li>
-<li><p>在下拉框中选择”允许本地PowerShell脚本在不签名的情况下运行“，此时会跳转到”开发者选项-&gt;PowerShell-&gt;应用一下设置以执行PowerShell脚本“。</p>
-</li>
-<li><p>下面的复选框会默认打勾（如果没打勾就自己打上），然后点击应用。</p>
-</li>
-<li><p>再次打开<code>PowerShell</code>，成功运行<code>hexo init blog</code>。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Linux修改SSH默认的22端口及关闭密码认证登录</title>
-    <url>/2021/07/26/Ubuntu%E4%BF%AE%E6%94%B9SSH%E7%AB%AF%E5%8F%A3%E5%8F%8A%E5%85%B3%E9%97%AD%E5%AF%86%E7%A0%81%E8%AE%A4%E8%AF%81%E7%99%BB%E5%BD%95/</url>
+    <url>/2021/07/26/abp0009</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h3><ol>
 <li><p>修改sshd配置</p>
@@ -136,42 +251,8 @@
       </categories>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/07/21/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Linux使用tar打包和解压</title>
-    <url>/2019/09/24/old_website/Ubuntu%E4%BD%BF%E7%94%A8tar%E6%89%93%E5%8C%85%E5%92%8C%E8%A7%A3%E5%8E%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>打包一个目录</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zcf ***.tar.gz /path</span><br></pre></td></tr></table></figure>
-
-<p>解压文件到一个目录</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf ***.tar.gz</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Ubuntu</category>
-        <category>SSH</category>
-      </categories>
-  </entry>
-  <entry>
     <title>修改Spring Boot启动时的默认图案Banner</title>
-    <url>/2019/01/18/old_website/Java%E4%BF%AE%E6%94%B9Spring%20Boot%E5%90%AF%E5%8A%A8%E6%97%A5%E5%BF%97%E7%9A%84%E9%BB%98%E8%AE%A4%E5%9B%BE%E6%A1%88Banner/</url>
+    <url>/2019/01/18/abp0001</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p><strong>一、替换banner</strong></p>
 <ol>
@@ -188,8 +269,24 @@
       </categories>
   </entry>
   <entry>
+    <title>Linux使用tar打包和解压</title>
+    <url>/2019/09/24/abp0002</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>打包一个目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zcf ***.tar.gz /path</span><br></pre></td></tr></table></figure>
+
+<p>解压文件到一个目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf ***.tar.gz</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>SSH</category>
+      </categories>
+  </entry>
+  <entry>
     <title>搭建Omni（USDT）本地测试环境，并模拟发布USDT代币</title>
-    <url>/2021/07/29/old_website/%E6%90%AD%E5%BB%BAOmni%EF%BC%88USDT%EF%BC%89%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83/</url>
+    <url>/2021/07/29/abp0003</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="运行Omni钱包Regtest（本地测试环境）节点"><a href="#运行Omni钱包Regtest（本地测试环境）节点" class="headerlink" title="运行Omni钱包Regtest（本地测试环境）节点"></a>运行Omni钱包Regtest（本地测试环境）节点</h3><blockquote>
 <p>文章基于<code>Windows10</code>系统上运行<code>Omnicore</code>，其它系统同理</p>
@@ -257,121 +354,6 @@
         <category>BlockChain</category>
         <category>Bitcoin</category>
         <category>Omni</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Docker的overlay2目录占用大，迁移docker工作目录的方法</title>
-    <url>/2021/08/02/Docker%E7%9A%84overlay2%E7%9B%AE%E5%BD%95%E5%8D%A0%E7%94%A8%E5%A4%A7%EF%BC%8C%E8%BF%81%E7%A7%BBdocker%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
-<p>在生产环境中，会经常遇到<code>docker</code>容器占用空间过大，系统盘磁盘空间不足的情况，随着使用量越来越大，这种时候仅仅是扩容系统盘已经无法完全解决这个问题，此时就需要挂载一个数据盘，本文挂载到目录<code>/mnt</code>下，然后将<code>docker</code>工作目录迁移到<code>/mnt</code></p>
-</blockquote>
-<hr>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ol>
-<li><p>先查看<code>docker</code>工作目录</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker info |grep &quot;Docker Root Dir&quot;</span><br></pre></td></tr></table></figure>
-<p>显示</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Docker Root Dir: /var/lib/docker</span><br></pre></td></tr></table></figure></li>
-<li><p>关闭<code>docker</code>服务</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl stop docker.service</span><br></pre></td></tr></table></figure></li>
-<li><p>移动目录到挂载的数据盘<code>/mnt</code>下</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mv /var/lib/docker /mnt/docker</span><br></pre></td></tr></table></figure></li>
-<li><p>修改<code>docker</code>启动配置</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/docker.service</span><br></pre></td></tr></table></figure>
-<p>有些系统是在这个目录下</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi /lib/systemd/system/docker.service</span><br></pre></td></tr></table></figure>
-<p>在<code>ExecStart=/usr/bin/dockerd</code>这行后追加<code>--graph=/mnt/docker</code></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --graph=/mnt/docker </span><br></pre></td></tr></table></figure></li>
-<li><p>重新加载，重启<code>docker</code></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl start docker.service</span><br></pre></td></tr></table></figure></li>
-</ol>
-<hr>
-<h3 id="Docker的一些其它命令"><a href="#Docker的一些其它命令" class="headerlink" title="Docker的一些其它命令"></a><code>Docker</code>的一些其它命令</h3><blockquote>
-<p>类似于Linux上的df命令，用于查看Docker的磁盘使用情况</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker system df</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>列出所有dangling(虚悬)镜像，也就是 TAG 为 &lt;none&gt; 的</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker images -f dangling=true</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>用于清理磁盘，删除关闭的容器、无用的数据卷和网络，以及dangling(虚悬)镜像</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker system prune</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>清理得更加彻底，可以将没有容器使用Docker镜像都删掉（请慎重操作）</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker system prune -a</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Ubuntu</category>
-        <category>Docker</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>如何使用 Markdown 编写技术文档</title>
-    <url>/2021/08/03/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20Markdown%20%E7%BC%96%E5%86%99%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p><a href="https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hans">如何使用 Markdown 编写技术文档</a> </p>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
-    <title>Win10系统下使用telnet命令ping远程端口</title>
-    <url>/2021/08/03/Win10%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8telnet%E5%91%BD%E4%BB%A4ping%E8%BF%9C%E7%A8%8B%E7%AB%AF%E5%8F%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><blockquote>
-<p>在<code>Win10</code>系统下，使用<code>ping</code>命令只能查看<code>80</code>端口通不通，如果要查看别的端口，就需要用到<code>telnet</code>命令。默认情况下，<code>telnet</code>命令是没有开启的，需要先启动这个命令</p>
-</blockquote>
-<hr>
-<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="打开系统的telnet命令"><a href="#打开系统的telnet命令" class="headerlink" title="打开系统的telnet命令"></a>打开系统的<code>telnet</code>命令</h3><ol>
-<li>右键<code>开始</code>菜单，选择<code>文件资源管理器</code>，在搜索框内输入<code>控制面板\程序\程序和功能</code>进入到<code>程序和功能窗口</code><br><img src="win10_telnet_search.png" alt="文件资源管理器"></li>
-<li>点击<code>启用或关闭Windows功能</code><br><img src="win10_telnet_click_enable_and_disable.png" alt="启用或关闭Windows功能"></li>
-<li>在弹出的<code>Windows</code>功能窗口中，找到<code>Telnet客户端</code>，并勾选复选框<br><img src="win10_telnet_click_operation.png" alt="勾选Telnet客户端"></li>
-<li>系统搜索需要等待一会儿，完成之后点击<code>关闭</code>即可<br><img src="win10_telnet_click_waiting.png" alt="勾选Telnet客户端"></li>
-</ol>
-<h3 id="使用telnet命令"><a href="#使用telnet命令" class="headerlink" title="使用telnet命令"></a>使用<code>telnet</code>命令</h3><ol>
-<li>右键<code>开始</code>菜单，选择<code>Windows PowerShell(管理员)</code>打开<code>PowerShell</code>命令行</li>
-<li>现在使用<code>telnet</code>测试一下远程<code>443</code>端口<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">telnet &lt;ip&gt; &lt;port&gt;</span><br></pre></td></tr></table></figure>
-<img src="win10_telnet_baidu_443.png" alt="Telnet百度443"></li>
-<li>如果成功，<code>PowerShell</code>窗口会变空白，标题会变成<code>Telnet 远程的ip</code>，内容的首个字符会有个光标一直闪烁。多按几次<code>回车</code>可退出<code>telnet</code>模式<br><img src="win10_telnet_baidu_443_result.png" alt="Telnet百度443结果"></li>
-<li>如果失败，<code>PowerShell</code>会一直显示<code>正在连接xxx.xxx.xxx.xxx...</code>，随后显示连接失败<br><img src="win10_telnet_google_443_fail.png" alt="Telnet谷歌443结果"></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Windows</category>
-        <category>Tools</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Chia正式网络水龙头免费领取XCH</title>
-    <url>/2021/08/09/Chia%E6%AD%A3%E5%BC%8F%E7%BD%91%E7%BB%9C%E6%B0%B4%E9%BE%99%E5%A4%B4%E5%85%8D%E8%B4%B9%E9%A2%86%E5%8F%96XCH/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ul>
-<li><p>Chia正式网络水龙头<br><a href="https://faucet.chia.net/">https://faucet.chia.net/</a></p>
-</li>
-<li><p>网站用到Google人机身份验证，可能需要科学上网</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>BlockChain</category>
-        <category>Chia</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Filecoin(Lotus)测试网络Calibration水龙头免费领取FIL</title>
-    <url>/2021/08/09/Filecoin(Lotus)%E6%B5%8B%E8%AF%95%E7%BD%91%E7%BB%9CCalibration%E6%B0%B4%E9%BE%99%E5%A4%B4%E5%85%8D%E8%B4%B9%E9%A2%86%E5%8F%96FIL/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ul>
-<li><p>Filecoin(Lotus)测试网络Calibration水龙头<br><a href="https://faucet.calibration.fildev.network/">https://faucet.calibration.fildev.network/</a></p>
-</li>
-<li><p>可能需要科学上网</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>BlockChain</category>
-        <category>Filecoin</category>
       </categories>
   </entry>
 </search>

@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Win10系统下使用telnet命令ping远程端口</title>
-    <url>/2021/08/03/abp0011</url>
+    <url>/2021/08/03/abp0011/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><blockquote>
 <p>在<code>Win10</code>系统下，使用<code>ping</code>命令只能查看<code>80</code>端口通不通，如果要查看别的端口，就需要用到<code>telnet</code>命令。默认情况下，<code>telnet</code>命令是没有开启的，需要先启动这个命令</p>
@@ -29,7 +29,7 @@
   </entry>
   <entry>
     <title>Win10使用PowerShell首次执行hexo，出现”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“解决办法</title>
-    <url>/2021/07/21/abp0010</url>
+    <url>/2021/07/21/abp0010/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
 <p>Win10使用<code>npm</code>安装<code>hexo</code>之后，使用<code>PowerShell</code>执行<code>hexo init blog</code>报错，”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“</p>
@@ -54,7 +54,7 @@
   </entry>
   <entry>
     <title>如何使用 Markdown 编写技术文档</title>
-    <url>/2021/08/03/abp0012</url>
+    <url>/2021/08/03/abp0012/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p><a href="https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hans">如何使用 Markdown 编写技术文档</a> </p>
 </blockquote>
@@ -62,7 +62,7 @@
   </entry>
   <entry>
     <title>Chia正式网络水龙头免费领取XCH</title>
-    <url>/2021/08/10/abp0004</url>
+    <url>/2021/08/10/abp0004/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ul>
 <li><p>Chia正式网络水龙头<br><a href="https://faucet.chia.net/">https://faucet.chia.net/</a></p>
@@ -78,7 +78,7 @@
   </entry>
   <entry>
     <title>Docker的overlay2目录占用大，迁移docker工作目录的方法</title>
-    <url>/2021/08/02/abp0005</url>
+    <url>/2021/08/02/abp0005/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
 <p>在生产环境中，会经常遇到<code>docker</code>容器占用空间过大，系统盘磁盘空间不足的情况，随着使用量越来越大，这种时候仅仅是扩容系统盘已经无法完全解决这个问题，此时就需要挂载一个数据盘，本文挂载到目录<code>/mnt</code>下，然后将<code>docker</code>工作目录迁移到<code>/mnt</code></p>
@@ -126,7 +126,7 @@
   </entry>
   <entry>
     <title>Filecoin(Lotus)测试网络Calibration水龙头免费领取FIL</title>
-    <url>/2021/08/09/abp0006</url>
+    <url>/2021/08/09/abp0006/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ul>
 <li><p>Filecoin(Lotus)测试网络Calibration水龙头<br><a href="https://faucet.calibration.fildev.network/">https://faucet.calibration.fildev.network/</a></p>
@@ -142,7 +142,7 @@
   </entry>
   <entry>
     <title>Java逐行读取某个目录下所有文件的内容</title>
-    <url>/2021/08/02/abp0007</url>
+    <url>/2021/08/02/abp0007/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
 <p>先获取目录<code>basePath</code>下面的文件名组数，再通过目录+文件名的方式读取每一个文件，最后通过<code>BufferedReader</code>的<code>readLine</code>功能读取文件内容</p>
@@ -157,7 +157,7 @@
   </entry>
   <entry>
     <title>Ubuntu20.04开机启动时出现A start job is running for wait for network to be Configured长时间等待的解决办法</title>
-    <url>/2021/07/28/abp0008</url>
+    <url>/2021/07/28/abp0008/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
 <p>官方Ubuntu20.04安装完成之后，开机启动时出现A start job is running for wait for network to be Configured (10s / no limit)，会造成长时间等待，开机时间过长。</p>
@@ -225,7 +225,7 @@
   </entry>
   <entry>
     <title>Linux修改SSH默认的22端口及关闭密码认证登录</title>
-    <url>/2021/07/26/abp0009</url>
+    <url>/2021/07/26/abp0009/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h3><ol>
 <li><p>修改sshd配置</p>
@@ -252,7 +252,7 @@
   </entry>
   <entry>
     <title>修改Spring Boot启动时的默认图案Banner</title>
-    <url>/2019/01/18/abp0001</url>
+    <url>/2019/01/18/abp0001/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p><strong>一、替换banner</strong></p>
 <ol>
@@ -270,7 +270,7 @@
   </entry>
   <entry>
     <title>Linux使用tar打包和解压</title>
-    <url>/2019/09/24/abp0002</url>
+    <url>/2019/09/24/abp0002/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>打包一个目录</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zcf ***.tar.gz /path</span><br></pre></td></tr></table></figure>
@@ -286,7 +286,7 @@
   </entry>
   <entry>
     <title>搭建Omni（USDT）本地测试环境，并模拟发布USDT代币</title>
-    <url>/2021/07/29/abp0003</url>
+    <url>/2021/07/29/abp0003/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <h3 id="运行Omni钱包Regtest（本地测试环境）节点"><a href="#运行Omni钱包Regtest（本地测试环境）节点" class="headerlink" title="运行Omni钱包Regtest（本地测试环境）节点"></a>运行Omni钱包Regtest（本地测试环境）节点</h3><blockquote>
 <p>文章基于<code>Windows10</code>系统上运行<code>Omnicore</code>，其它系统同理</p>
@@ -354,6 +354,135 @@
         <category>BlockChain</category>
         <category>Bitcoin</category>
         <category>Omni</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux 格式化数据盘 挂载数据盘</title>
+    <url>/2021/08/11/abp0013/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
+<p>很多小伙伴使用Linux都会面临系统盘磁盘空间不够用的情况，这种时候就需要添加数据盘并且挂载上去使用</p>
+</blockquote>
+<hr>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>远程连接实例</p>
+<p>运行 <code>fdisk -l</code> 命令查看实例是否有数据盘。如果执行命令后，没有发现 <code>/dev/vdb</code>，表示您的实例没有数据盘，无需格式化数据盘，请忽略本文后续内容。</p>
+<p>创建一个单分区数据盘，依次执行以下命令：</p>
+<ul>
+<li>运行 <code>fdisk /dev/vdb</code>：分区数据盘。</li>
+<li>输入 <code>n</code> 并按回车键：创建一个新分区。</li>
+<li>输入 <code>p</code> 并按回车键：选择主分区。因为创建的是一个单分区数据盘，所以只需要创建主分区。</li>
+<li>输入分区编号并按回车键。因为这里仅创建一个分区，可以输入 <code>1</code>。</li>
+<li>输入第一个可用的扇区编号：按回车键采用默认值 <code>1</code>。</li>
+<li>输入最后一个扇区编号：因为这里仅创建一个分区，所以按回车键采用默认值。</li>
+<li>输入 <code>wq</code> 并按回车键，开始分区。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># fdisk /dev/vdb</span></span><br><span class="line">Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel</span><br><span class="line">Building a new DOS disklabel with disk identifier 0x5f46a8a2.</span><br><span class="line">Changes will remain <span class="keyword">in</span> memory only, until you decide to write them.</span><br><span class="line">After that, of course, the previous content won<span class="string">&#x27;t be recoverable.</span></span><br><span class="line"><span class="string">Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)</span></span><br><span class="line"><span class="string">WARNING: DOS-compatible mode is deprecated. It&#x27;</span>s strongly recommended to</span><br><span class="line">switch off the mode (<span class="built_in">command</span> <span class="string">&#x27;c&#x27;</span>) and change display units to</span><br><span class="line">sectors (<span class="built_in">command</span> <span class="string">&#x27;u&#x27;</span>).</span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): n</span><br><span class="line">Command action</span><br><span class="line">e extended</span><br><span class="line">p primary partition (1-4)</span><br><span class="line">p</span><br><span class="line">Partition number (1-4): 1</span><br><span class="line">First cylinder (1-41610, default 1): 1</span><br><span class="line">Last cylinder, +cylinders or +size&#123;K,M,G&#125; (1-41610, default 41610):</span><br><span class="line">Using default value 41610</span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): wq</span><br><span class="line">The partition table has been altered!</span><br><span class="line">Calling ioctl() to re-read partition table.</span><br><span class="line">Syncing disks.</span><br></pre></td></tr></table></figure>
+
+<p>查看新的分区：运行命令 <code>fdisk -l</code>。如果出现以下信息，说明已经成功创建了新分区 <code>/dev/vdb1</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># fdisk -l</span></span><br><span class="line">Disk /dev/vda: 42.9 GB, 42949672960 bytes</span><br><span class="line">255 heads, 63 sectors/track, 5221 cylinders</span><br><span class="line">Units = cylinders of 16065 * 512 = 8225280 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x00053156</span><br><span class="line">Device Boot Start End Blocks Id System</span><br><span class="line">/dev/vda1 * 1 5222 41942016 83 Linux</span><br><span class="line">Disk /dev/vdb: 21.5 GB, 21474836480 bytes</span><br><span class="line">16 heads, 63 sectors/track, 41610 cylinders</span><br><span class="line">Units = cylinders of 1008 * 512 = 516096 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x5f46a8a2</span><br><span class="line">Device Boot Start End Blocks Id System</span><br><span class="line">/dev/vdb1 1 41610 20971408+ 83 Linux</span><br></pre></td></tr></table></figure>
+
+<p>在新分区上创建一个文件系统：运行命令 <code>mkfs.ext3 /dev/vdb1</code>。</p>
+<p>本示例要创建一个 <code>ext3</code> 文件系统。您也可以根据自己的需要，选择创建其他文件系统，例如，如果需要在 Linux、Windows 和 Mac 系统之间共享文件，您可以使用 <code>mkfs.vfat</code> 创建 VFAT 文件系统。</p>
+<p>创建文件系统所需时间取决于数据盘大小。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># mkfs.ext3 /dev/vdb1</span></span><br><span class="line">mke2fs 1.41.12 (17-May-2010)</span><br><span class="line">Filesystem label=</span><br><span class="line">OS <span class="built_in">type</span>: Linux</span><br><span class="line">Block size=4096 (<span class="built_in">log</span>=2)</span><br><span class="line">Fragment size=4096 (<span class="built_in">log</span>=2)</span><br><span class="line">Stride=0 blocks, Stripe width=0 blocks</span><br><span class="line">1310720 inodes, 5242852 blocks</span><br><span class="line">262142 blocks (5.00%) reserved <span class="keyword">for</span> the super user</span><br><span class="line">First data block=0</span><br><span class="line">Maximum filesystem blocks=4294967296</span><br><span class="line">160 block groups</span><br><span class="line">32768 blocks per group, 32768 fragments per group</span><br><span class="line">8192 inodes per group</span><br><span class="line">Superblock backups stored on blocks:</span><br><span class="line">32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,</span><br><span class="line">4096000</span><br><span class="line">Writing inode tables: <span class="keyword">done</span></span><br><span class="line">Creating journal (32768 blocks): <span class="keyword">done</span></span><br><span class="line">Writing superblocks and filesystem accounting information: <span class="keyword">done</span></span><br><span class="line">This filesystem will be automatically checked every 37 mounts or</span><br><span class="line">180 days, whichever comes first. Use tune2fs -c or -i to override.</span><br></pre></td></tr></table></figure>
+
+<p>（建议）备份 etc/fstab：运行命令 <code>cp /etc/fstab /etc/fstab.bak</code>。</p>
+<p>向 <code>/etc/fstab</code> 写入新分区信息：运行命令 <code>echo /dev/vdb1 /mnt ext3 defaults 0 0 &gt;&gt; /etc/fstab</code>。如果需要把数据盘单独挂载到某个文件夹，比如单独用来存放网页，请将以上命令 <code>/mnt</code> 替换成所需的挂载点路径。</p>
+<p>查看 <code>/etc/fstab</code> 中的新分区信息：运行命令 <code>cat /etc/fstab</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># cat /etc/fstab</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># /etc/fstab</span></span><br><span class="line"><span class="comment"># Created by anaconda on Thu Feb 23 07:28:22 2017</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Accessible filesystems, by reference, are maintained under &#x27;/dev/disk&#x27;</span></span><br><span class="line"><span class="comment"># See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">UUID=3d083579-f5d9-4df5-9347-8d27925805d4 / ext4 defaults 1 1</span><br><span class="line">tmpfs /dev/shm tmpfs defaults 0 0</span><br><span class="line">devpts /dev/pts devpts gid=5,mode=620 0 0</span><br><span class="line">sysfs /sys sysfs defaults 0 0</span><br><span class="line">proc /proc proc defaults 0 0</span><br><span class="line">/dev/vdb1 /mnt ext3 defaults 0 0</span><br></pre></td></tr></table></figure>
+
+
+
+<p>挂载文件系统：运行命令 <code>mount /dev/vdb1 /mnt</code>。</p>
+<p>查看目前磁盘空间和使用情况：运行命令 <code>df -h</code>。如果出现新建文件系统的信息，说明挂载成功，可以使用新的文件系统了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># mount /dev/vdb1 /mnt</span></span><br><span class="line">[root@iXXXXXXX ~]<span class="comment"># df -h</span></span><br><span class="line">Filesystem Size Used Avail Use% Mounted on</span><br><span class="line">/dev/vda1 40G 6.6G 31G 18% /</span><br><span class="line">tmpfs 499M 0 499M 0% /dev/shm</span><br><span class="line">/dev/vdb1 20G 173M 19G 1% /mnt</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Docker查看容器资源占用情况</title>
+    <url>/2021/08/11/abp0014/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
+<p>有些时候<code>Docker</code>集群项目出现问题，需要快速查找问题所在，这种时候首先就需要查看<code>Docker</code>的各个容器是否有资源使用不正常的情况</p>
+</blockquote>
+<hr>
+<h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><p>使用<code>docker stats</code> 命令用来显示容器使用的系统资源。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats</span><br></pre></td></tr></table></figure>
+
+<p>默认输出</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">CONTAINER           CPU %               MEM USAGE / LIMIT       MEM %               NET I/O             BLOCK I/O           PIDS</span><br><span class="line">d7ef5139ea28        0.10%               273.3 MiB / 1.796 GiB   14.86%              302 MB / 305 MB     269 MB / 0 B        29</span><br><span class="line">083e9f44bf1b        0.00%               5.859 MiB / 1.796 GiB   0.32%               3.05 GB / 3.07 GB   339 MB / 0 B        9</span><br><span class="line">996236181fa3        0.50%               11.79 MiB / 1.796 GiB   0.64%               3.39 GB / 4.04 GB   183 MB / 0 B        9</span><br><span class="line">1b610486dbcf        0.00%               43.05 MiB / 1.796 GiB   2.34%               1.33 GB / 488 MB    21.3 GB / 248 MB    16</span><br><span class="line">3934362529c3        0.03%               280.1 MiB / 1.796 GiB   15.23%              567 MB / 1.16 GB    6.91 GB / 517 MB    39</span><br></pre></td></tr></table></figure>
+
+<p>可以看到输出上面内容的情况下，会每隔1秒钟刷新一次输出的内容。按下 <kbd>Ctrl</kbd>+<kbd>C</kbd> 可以结束。下面是输出的内容的说明：</p>
+<ul>
+<li>[CONTAINER]：以短格式显示容器的 ID。</li>
+<li>[CPU %]：CPU 的使用情况。</li>
+<li>[MEM USAGE / LIMIT]：当前使用的内存和最大可以使用的内存。</li>
+<li>[MEM %]：以百分比的形式显示内存使用情况。</li>
+<li>[NET I/O]：网络 I/O 数据。</li>
+<li>[BLOCK I/O]：磁盘 I/O 数据。</li>
+<li>[PIDS]：PID 号。</li>
+</ul>
+<p>如果只需要查看当时状态，可以使用<code>--no-stream</code>，输出之后命令行会自动结束</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats --no-stream</span><br></pre></td></tr></table></figure>
+
+<p>很明显按照上面这种情况，如果容器太多了，我们很难去对应是输出的哪一个容器的信息。这个时候就需要使用<code>--format</code>将返回结果按照自己需要的内容输出</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats --format <span class="string">&quot;table &#123;&#123;.Container&#125;&#125;\t&#123;&#123;.Name&#125;&#125;\t&#123;&#123;.CPUPerc&#125;&#125;\t&#123;&#123;.MemUsage&#125;&#125;\t&#123;&#123;.NetIO&#125;&#125;\t&#123;&#123;.BlockIO&#125;&#125;\t&#123;&#123;.MemPerc&#125;&#125;\t&#123;&#123;.PIDs&#125;&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>这样就能很容易的对应自己设置容器名称</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">CONTAINER           NAME                CPU %               MEM USAGE / LIMIT       NET I/O             BLOCK I/O           MEM %               PIDS</span><br><span class="line">d7ef5139ea28        blog                0.12%               273.3 MiB / 1.796 GiB   304 MB / 306 MB     269 MB / 0 B        14.86%              29</span><br><span class="line">083e9f44bf1b        v2ray-usa           0.00%               5.977 MiB / 1.796 GiB   3.05 GB / 3.07 GB   339 MB / 0 B        0.32%               9</span><br><span class="line">996236181fa3        v2ray               0.40%               11.8 MiB / 1.796 GiB    3.41 GB / 4.06 GB   183 MB / 0 B        0.64%               9</span><br><span class="line">1b610486dbcf        gogs                0.00%               43.02 MiB / 1.796 GiB   1.33 GB / 488 MB    21.3 GB / 248 MB    2.34%               16</span><br><span class="line">3934362529c3        mysql               0.04%               280.1 MiB / 1.796 GiB   567 MB / 1.16 GB    6.91 GB / 517 MB    15.23%              39</span><br></pre></td></tr></table></figure>
+<p>下面是<code>--format</code>可自定义的占位符</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.Container</code></td>
+<td align="left">容器的名称或 ID</td>
+</tr>
+<tr>
+<td><code>.Name</code></td>
+<td align="left">容器名称</td>
+</tr>
+<tr>
+<td><code>.ID</code></td>
+<td align="left">容器 ID</td>
+</tr>
+<tr>
+<td><code>.CPUPerc</code></td>
+<td align="left">CPU 使用率</td>
+</tr>
+<tr>
+<td><code>.MemUsage</code></td>
+<td align="left">内存使用量</td>
+</tr>
+<tr>
+<td><code>.NetIO</code></td>
+<td align="left">网络 I/O</td>
+</tr>
+<tr>
+<td><code>.BlockIO</code></td>
+<td align="left">磁盘 I/O</td>
+</tr>
+<tr>
+<td><code>.MemPerc</code></td>
+<td align="left">内存使用率</td>
+</tr>
+<tr>
+<td><code>.PIDs</code></td>
+<td align="left">PID 号</td>
+</tr>
+</tbody></table>
+<p>有些时候为了方便处理，也可以将<code>--format</code>按照<code>json</code>格式输出</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats --no-stream --format <span class="string">&quot;&#123;\&quot;container\&quot;:\&quot;&#123;&#123; .Container &#125;&#125;\&quot;,\&quot;memory\&quot;:&#123;\&quot;raw\&quot;:\&quot;&#123;&#123; .MemUsage &#125;&#125;\&quot;,\&quot;percent\&quot;:\&quot;&#123;&#123; .MemPerc &#125;&#125;\&quot;&#125;,\&quot;cpu\&quot;:\&quot;&#123;&#123; .CPUPerc &#125;&#125;\&quot;&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;d7ef5139ea28&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;273.3 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;14.86%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.10%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;083e9f44bf1b&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;6.078 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;0.33%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.00%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;996236181fa3&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;11.88 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;0.65%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.31%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;1b610486dbcf&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;42.93 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;2.33%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.00%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;3934362529c3&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;280.1 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;15.23%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.04%&quot;</span>&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Docker</category>
+        <category>Linux</category>
       </categories>
   </entry>
 </search>

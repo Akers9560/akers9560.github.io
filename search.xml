@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Win10使用PowerShell首次执行hexo，出现”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“解决办法</title>
+    <url>/2021/07/21/abp0010/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
+<p>Win10使用<code>npm</code>安装<code>hexo</code>之后，使用<code>PowerShell</code>执行<code>hexo init blog</code>报错，”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“</p>
+</blockquote>
+<hr>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
+<li><p>使用 <kbd>Win</kbd>+<kbd>I</kbd> 组合键打开设置面板。</p>
+</li>
+<li><p>在搜索框中输入<code>powershell</code>，弹出下拉框。</p>
+</li>
+<li><p>在下拉框中选择”允许本地PowerShell脚本在不签名的情况下运行“，此时会跳转到”开发者选项-&gt;PowerShell-&gt;应用一下设置以执行PowerShell脚本“。</p>
+</li>
+<li><p>下面的复选框会默认打勾（如果没打勾就自己打上），然后点击应用。</p>
+</li>
+<li><p>再次打开<code>PowerShell</code>，成功运行<code>hexo init blog</code>。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Win10系统下使用telnet命令ping远程端口</title>
     <url>/2021/08/03/abp0011/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
@@ -28,37 +53,195 @@
       </categories>
   </entry>
   <entry>
-    <title>Win10使用PowerShell首次执行hexo，出现”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“解决办法</title>
-    <url>/2021/07/21/abp0010/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><blockquote>
-<p>Win10使用<code>npm</code>安装<code>hexo</code>之后，使用<code>PowerShell</code>执行<code>hexo init blog</code>报错，”无法加载文件 xxx\AppData\Roaming\npm\hexo.ps1，因为在此系统上禁止运行脚本“</p>
-</blockquote>
-<hr>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
-<li><p>使用 <kbd>Win</kbd>+<kbd>I</kbd> 组合键打开设置面板。</p>
-</li>
-<li><p>在搜索框中输入<code>powershell</code>，弹出下拉框。</p>
-</li>
-<li><p>在下拉框中选择”允许本地PowerShell脚本在不签名的情况下运行“，此时会跳转到”开发者选项-&gt;PowerShell-&gt;应用一下设置以执行PowerShell脚本“。</p>
-</li>
-<li><p>下面的复选框会默认打勾（如果没打勾就自己打上），然后点击应用。</p>
-</li>
-<li><p>再次打开<code>PowerShell</code>，成功运行<code>hexo init blog</code>。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-  </entry>
-  <entry>
     <title>如何使用 Markdown 编写技术文档</title>
     <url>/2021/08/03/abp0012/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p><a href="https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hans">如何使用 Markdown 编写技术文档</a> </p>
 </blockquote>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Linux 格式化数据盘 挂载数据盘</title>
+    <url>/2021/08/11/abp0013/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
+<p>很多小伙伴使用Linux都会面临系统盘磁盘空间不够用的情况，这种时候就需要添加数据盘并且挂载上去使用</p>
+</blockquote>
+<hr>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>远程连接实例</p>
+<p>运行 <code>fdisk -l</code> 命令查看实例是否有数据盘。如果执行命令后，没有发现 <code>/dev/vdb</code>，表示您的实例没有数据盘，无需格式化数据盘，请忽略本文后续内容。</p>
+<p>创建一个单分区数据盘，依次执行以下命令：</p>
+<ul>
+<li>运行 <code>fdisk /dev/vdb</code>：分区数据盘。</li>
+<li>输入 <code>n</code> 并按回车键：创建一个新分区。</li>
+<li>输入 <code>p</code> 并按回车键：选择主分区。因为创建的是一个单分区数据盘，所以只需要创建主分区。</li>
+<li>输入分区编号并按回车键。因为这里仅创建一个分区，可以输入 <code>1</code>。</li>
+<li>输入第一个可用的扇区编号：按回车键采用默认值 <code>1</code>。</li>
+<li>输入最后一个扇区编号：因为这里仅创建一个分区，所以按回车键采用默认值。</li>
+<li>输入 <code>wq</code> 并按回车键，开始分区。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># fdisk /dev/vdb</span></span><br><span class="line">Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel</span><br><span class="line">Building a new DOS disklabel with disk identifier 0x5f46a8a2.</span><br><span class="line">Changes will remain <span class="keyword">in</span> memory only, until you decide to write them.</span><br><span class="line">After that, of course, the previous content won<span class="string">&#x27;t be recoverable.</span></span><br><span class="line"><span class="string">Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)</span></span><br><span class="line"><span class="string">WARNING: DOS-compatible mode is deprecated. It&#x27;</span>s strongly recommended to</span><br><span class="line">switch off the mode (<span class="built_in">command</span> <span class="string">&#x27;c&#x27;</span>) and change display units to</span><br><span class="line">sectors (<span class="built_in">command</span> <span class="string">&#x27;u&#x27;</span>).</span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): n</span><br><span class="line">Command action</span><br><span class="line">e extended</span><br><span class="line">p primary partition (1-4)</span><br><span class="line">p</span><br><span class="line">Partition number (1-4): 1</span><br><span class="line">First cylinder (1-41610, default 1): 1</span><br><span class="line">Last cylinder, +cylinders or +size&#123;K,M,G&#125; (1-41610, default 41610):</span><br><span class="line">Using default value 41610</span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): wq</span><br><span class="line">The partition table has been altered!</span><br><span class="line">Calling ioctl() to re-read partition table.</span><br><span class="line">Syncing disks.</span><br></pre></td></tr></table></figure>
+
+<p>查看新的分区：运行命令 <code>fdisk -l</code>。如果出现以下信息，说明已经成功创建了新分区 <code>/dev/vdb1</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># fdisk -l</span></span><br><span class="line">Disk /dev/vda: 42.9 GB, 42949672960 bytes</span><br><span class="line">255 heads, 63 sectors/track, 5221 cylinders</span><br><span class="line">Units = cylinders of 16065 * 512 = 8225280 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x00053156</span><br><span class="line">Device Boot Start End Blocks Id System</span><br><span class="line">/dev/vda1 * 1 5222 41942016 83 Linux</span><br><span class="line">Disk /dev/vdb: 21.5 GB, 21474836480 bytes</span><br><span class="line">16 heads, 63 sectors/track, 41610 cylinders</span><br><span class="line">Units = cylinders of 1008 * 512 = 516096 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x5f46a8a2</span><br><span class="line">Device Boot Start End Blocks Id System</span><br><span class="line">/dev/vdb1 1 41610 20971408+ 83 Linux</span><br></pre></td></tr></table></figure>
+
+<p>在新分区上创建一个文件系统：运行命令 <code>mkfs.ext3 /dev/vdb1</code>。</p>
+<p>本示例要创建一个 <code>ext3</code> 文件系统。您也可以根据自己的需要，选择创建其他文件系统，例如，如果需要在 Linux、Windows 和 Mac 系统之间共享文件，您可以使用 <code>mkfs.vfat</code> 创建 VFAT 文件系统。</p>
+<p>创建文件系统所需时间取决于数据盘大小。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># mkfs.ext3 /dev/vdb1</span></span><br><span class="line">mke2fs 1.41.12 (17-May-2010)</span><br><span class="line">Filesystem label=</span><br><span class="line">OS <span class="built_in">type</span>: Linux</span><br><span class="line">Block size=4096 (<span class="built_in">log</span>=2)</span><br><span class="line">Fragment size=4096 (<span class="built_in">log</span>=2)</span><br><span class="line">Stride=0 blocks, Stripe width=0 blocks</span><br><span class="line">1310720 inodes, 5242852 blocks</span><br><span class="line">262142 blocks (5.00%) reserved <span class="keyword">for</span> the super user</span><br><span class="line">First data block=0</span><br><span class="line">Maximum filesystem blocks=4294967296</span><br><span class="line">160 block groups</span><br><span class="line">32768 blocks per group, 32768 fragments per group</span><br><span class="line">8192 inodes per group</span><br><span class="line">Superblock backups stored on blocks:</span><br><span class="line">32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,</span><br><span class="line">4096000</span><br><span class="line">Writing inode tables: <span class="keyword">done</span></span><br><span class="line">Creating journal (32768 blocks): <span class="keyword">done</span></span><br><span class="line">Writing superblocks and filesystem accounting information: <span class="keyword">done</span></span><br><span class="line">This filesystem will be automatically checked every 37 mounts or</span><br><span class="line">180 days, whichever comes first. Use tune2fs -c or -i to override.</span><br></pre></td></tr></table></figure>
+
+<p>（建议）备份 etc/fstab：运行命令 <code>cp /etc/fstab /etc/fstab.bak</code>。</p>
+<p>向 <code>/etc/fstab</code> 写入新分区信息：运行命令 <code>echo /dev/vdb1 /mnt ext3 defaults 0 0 &gt;&gt; /etc/fstab</code>。如果需要把数据盘单独挂载到某个文件夹，比如单独用来存放网页，请将以上命令 <code>/mnt</code> 替换成所需的挂载点路径。</p>
+<p>查看 <code>/etc/fstab</code> 中的新分区信息：运行命令 <code>cat /etc/fstab</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># cat /etc/fstab</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># /etc/fstab</span></span><br><span class="line"><span class="comment"># Created by anaconda on Thu Feb 23 07:28:22 2017</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Accessible filesystems, by reference, are maintained under &#x27;/dev/disk&#x27;</span></span><br><span class="line"><span class="comment"># See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">UUID=3d083579-f5d9-4df5-9347-8d27925805d4 / ext4 defaults 1 1</span><br><span class="line">tmpfs /dev/shm tmpfs defaults 0 0</span><br><span class="line">devpts /dev/pts devpts gid=5,mode=620 0 0</span><br><span class="line">sysfs /sys sysfs defaults 0 0</span><br><span class="line">proc /proc proc defaults 0 0</span><br><span class="line">/dev/vdb1 /mnt ext3 defaults 0 0</span><br></pre></td></tr></table></figure>
+
+
+
+<p>挂载文件系统：运行命令 <code>mount /dev/vdb1 /mnt</code>。</p>
+<p>查看目前磁盘空间和使用情况：运行命令 <code>df -h</code>。如果出现新建文件系统的信息，说明挂载成功，可以使用新的文件系统了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># mount /dev/vdb1 /mnt</span></span><br><span class="line">[root@iXXXXXXX ~]<span class="comment"># df -h</span></span><br><span class="line">Filesystem Size Used Avail Use% Mounted on</span><br><span class="line">/dev/vda1 40G 6.6G 31G 18% /</span><br><span class="line">tmpfs 499M 0 499M 0% /dev/shm</span><br><span class="line">/dev/vdb1 20G 173M 19G 1% /mnt</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Docker查看容器资源占用情况</title>
+    <url>/2021/08/11/abp0014/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
+<p>有些时候<code>Docker</code>集群项目出现问题，需要快速查找问题所在，这种时候首先就需要查看<code>Docker</code>的各个容器是否有资源使用不正常的情况</p>
+</blockquote>
+<hr>
+<h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><p>使用<code>docker stats</code> 命令用来显示容器使用的系统资源。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats</span><br></pre></td></tr></table></figure>
+
+<p>默认输出</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">CONTAINER           CPU %               MEM USAGE / LIMIT       MEM %               NET I/O             BLOCK I/O           PIDS</span><br><span class="line">d7ef5139ea28        0.10%               273.3 MiB / 1.796 GiB   14.86%              302 MB / 305 MB     269 MB / 0 B        29</span><br><span class="line">083e9f44bf1b        0.00%               5.859 MiB / 1.796 GiB   0.32%               3.05 GB / 3.07 GB   339 MB / 0 B        9</span><br><span class="line">996236181fa3        0.50%               11.79 MiB / 1.796 GiB   0.64%               3.39 GB / 4.04 GB   183 MB / 0 B        9</span><br><span class="line">1b610486dbcf        0.00%               43.05 MiB / 1.796 GiB   2.34%               1.33 GB / 488 MB    21.3 GB / 248 MB    16</span><br><span class="line">3934362529c3        0.03%               280.1 MiB / 1.796 GiB   15.23%              567 MB / 1.16 GB    6.91 GB / 517 MB    39</span><br></pre></td></tr></table></figure>
+
+<p>可以看到输出上面内容的情况下，会每隔1秒钟刷新一次输出的内容。按下 <kbd>Ctrl</kbd>+<kbd>C</kbd> 可以结束。下面是输出的内容的说明：</p>
+<ul>
+<li>[CONTAINER]：以短格式显示容器的 ID。</li>
+<li>[CPU %]：CPU 的使用情况。</li>
+<li>[MEM USAGE / LIMIT]：当前使用的内存和最大可以使用的内存。</li>
+<li>[MEM %]：以百分比的形式显示内存使用情况。</li>
+<li>[NET I/O]：网络 I/O 数据。</li>
+<li>[BLOCK I/O]：磁盘 I/O 数据。</li>
+<li>[PIDS]：PID 号。</li>
+</ul>
+<p>如果只需要查看当时状态，可以使用<code>--no-stream</code>，输出之后命令行会自动结束</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats --no-stream</span><br></pre></td></tr></table></figure>
+
+<p>很明显按照上面这种情况，如果容器太多了，我们很难去对应是输出的哪一个容器的信息。这个时候就需要使用<code>--format</code>将返回结果按照自己需要的内容输出</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats --format <span class="string">&quot;table &#123;&#123;.Container&#125;&#125;\t&#123;&#123;.Name&#125;&#125;\t&#123;&#123;.CPUPerc&#125;&#125;\t&#123;&#123;.MemUsage&#125;&#125;\t&#123;&#123;.NetIO&#125;&#125;\t&#123;&#123;.BlockIO&#125;&#125;\t&#123;&#123;.MemPerc&#125;&#125;\t&#123;&#123;.PIDs&#125;&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>这样就能很容易的对应自己设置容器名称</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">CONTAINER           NAME                CPU %               MEM USAGE / LIMIT       NET I/O             BLOCK I/O           MEM %               PIDS</span><br><span class="line">d7ef5139ea28        blog                0.12%               273.3 MiB / 1.796 GiB   304 MB / 306 MB     269 MB / 0 B        14.86%              29</span><br><span class="line">083e9f44bf1b        v2ray-usa           0.00%               5.977 MiB / 1.796 GiB   3.05 GB / 3.07 GB   339 MB / 0 B        0.32%               9</span><br><span class="line">996236181fa3        v2ray               0.40%               11.8 MiB / 1.796 GiB    3.41 GB / 4.06 GB   183 MB / 0 B        0.64%               9</span><br><span class="line">1b610486dbcf        gogs                0.00%               43.02 MiB / 1.796 GiB   1.33 GB / 488 MB    21.3 GB / 248 MB    2.34%               16</span><br><span class="line">3934362529c3        mysql               0.04%               280.1 MiB / 1.796 GiB   567 MB / 1.16 GB    6.91 GB / 517 MB    15.23%              39</span><br></pre></td></tr></table></figure>
+
+<p>下面是<code>--format</code>可自定义的占位符</p>
+<table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>.Container</code></td>
+<td align="left">容器的名称或 ID</td>
+</tr>
+<tr>
+<td align="left"><code>.Name</code></td>
+<td align="left">容器名称</td>
+</tr>
+<tr>
+<td align="left"><code>.ID</code></td>
+<td align="left">容器 ID</td>
+</tr>
+<tr>
+<td align="left"><code>.CPUPerc</code></td>
+<td align="left">CPU 使用率</td>
+</tr>
+<tr>
+<td align="left"><code>.MemUsage</code></td>
+<td align="left">内存使用量</td>
+</tr>
+<tr>
+<td align="left"><code>.NetIO</code></td>
+<td align="left">网络 I/O</td>
+</tr>
+<tr>
+<td align="left"><code>.BlockIO</code></td>
+<td align="left">磁盘 I/O</td>
+</tr>
+<tr>
+<td align="left"><code>.MemPerc</code></td>
+<td align="left">内存使用率</td>
+</tr>
+<tr>
+<td align="left"><code>.PIDs</code></td>
+<td align="left">PID 号</td>
+</tr>
+</tbody></table>
+<p>有些时候为了方便处理，也可以将<code>--format</code>按照<code>json</code>格式输出</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats --no-stream --format <span class="string">&quot;&#123;\&quot;container\&quot;:\&quot;&#123;&#123; .Container &#125;&#125;\&quot;,\&quot;memory\&quot;:&#123;\&quot;raw\&quot;:\&quot;&#123;&#123; .MemUsage &#125;&#125;\&quot;,\&quot;percent\&quot;:\&quot;&#123;&#123; .MemPerc &#125;&#125;\&quot;&#125;,\&quot;cpu\&quot;:\&quot;&#123;&#123; .CPUPerc &#125;&#125;\&quot;&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;d7ef5139ea28&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;273.3 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;14.86%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.10%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;083e9f44bf1b&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;6.078 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;0.33%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.00%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;996236181fa3&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;11.88 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;0.65%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.31%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;1b610486dbcf&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;42.93 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;2.33%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.00%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;3934362529c3&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;280.1 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;15.23%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.04%&quot;</span>&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Docker</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Vim专题使用及详解</title>
+    <url>/2021/08/12/abp0015/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
+<p>由于在服务器的使用当中，有些时候需要在服务器上面直接修改一些内容，有个强大的工具叫<code>Vim</code>，但是<code>Vim</code>的使用又非常复杂，这里做一篇专门的教程记录一些平时常需要用到的功能。</p>
+</blockquote>
+<hr>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li>Ubuntu<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install vim</span><br></pre></td></tr></table></figure></li>
+<li>CentOS<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install vim</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="简单模式"><a href="#简单模式" class="headerlink" title="简单模式"></a>简单模式</h3><ul>
+<li>直接打开一个文件的编辑模式<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim &lt;filename&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<p>未完待续…</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Vim</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>关于JAVA发送Https请求（HttpsURLConnection和HttpURLConnection）</title>
+    <url>/2021/08/13/abp0016/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p><code>https</code>协议对于开发者而言其实只是多了一步证书验证的过程。这个证书正常情况下被<code>jdk/jre/security/cacerts</code>所管理。里面证书包含两种情况：</p>
+<ol>
+<li>机构所颁发的被认证的证书，这种证书的网站在浏览器访问时<code>https</code>头显示为绿色如百度</li>
+<li>个人生成的证书，这种证书的网站在浏览器里<code>https</code>头显示为红色×，且需要点击信任该网站才能继续访问。而点击信任这一步的操作就是我们在<code>java</code>代码访问<code>https</code>网站时区别于<code>http</code>请求需要做的事情。</li>
+</ol>
+<hr>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p><code>JAVA</code>发送<code>Https</code>请求有两种情况，三种解决办法</p>
+<p>一、 <code>Https</code>网站的证书为机构所颁发的被认证的证书，这种情况下和<code>http</code>请求一模一样，无需做任何改变，用<code>HttpsURLConnection</code>或者<code>HttpURLConnection</code>都可以</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) throws Exception&#123;</span><br><span class="line">    URL serverUrl = new URL(&quot;https://xxxx&quot;);</span><br><span class="line">    HttpURLConnection conn = (HttpURLConnection) serverUrl.openConnection();</span><br><span class="line">    conn.setRequestMethod(&quot;GET&quot;);</span><br><span class="line">    conn.setRequestProperty(&quot;Content-type&quot;, &quot;application/json&quot;);</span><br><span class="line">    //必须设置false，否则会自动redirect到重定向后的地址</span><br><span class="line">    conn.setInstanceFollowRedirects(false);</span><br><span class="line">    conn.connect();</span><br><span class="line">    String result = getReturn(conn);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*请求url获取返回的内容*/</span><br><span class="line">public static String getReturn(HttpURLConnection connection) throws IOException&#123;</span><br><span class="line">    StringBuffer buffer = new StringBuffer();</span><br><span class="line">    //将返回的输入流转换成字符串</span><br><span class="line">    try(InputStream inputStream = connection.getInputStream();</span><br><span class="line">        InputStreamReader inputStreamReader = new InputStreamReader(inputStream, ConstantInfo.CHARSET);</span><br><span class="line">        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);)&#123;</span><br><span class="line">        String str = null;</span><br><span class="line">        while ((str = bufferedReader.readLine()) != null) &#123;</span><br><span class="line">            buffer.append(str);</span><br><span class="line">        &#125;</span><br><span class="line">        String result = buffer.toString();</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>二、 个人所设定的证书，这种证书默认不被信任，需要我们自己选择信任，信任的办法有两种：<br>将证书导入<code>java</code>的运行环境中</p>
+<p>从该网站下载或者从网站开发者出获取证书<code>cacert.crt</code></p>
+<p>运行命令将证书导入<code>java</code>运行环境：<code>keytool -import -keystore %JAVA_HOME%\jre\lib\security\cacerts -file cacert.crt -alias xxx</code></p>
+<p>完成。<code>java</code>代码中发送<code>https</code>的请求和<code>http</code>一样，同第一种情况。</p>
+<p>忽略证书验证过程，忽略之后任何<code>Https</code>协议网站皆能正常访问，同第一种情况</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.security.cert.CertificateException;</span><br><span class="line"><span class="keyword">import</span> java.security.cert.X509Certificate;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.X509TrustManager;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyX509TrustManager</span> <span class="keyword">implements</span> <span class="title">X509TrustManager</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkClientTrusted</span><span class="params">(X509Certificate certificates[],String authType)</span> <span class="keyword">throws</span> CertificateException </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkServerTrusted</span><span class="params">(X509Certificate[] ax509certificate,String s)</span> <span class="keyword">throws</span> CertificateException </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> X509Certificate[] getAcceptedIssuers() &#123;</span><br><span class="line">        <span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        SSLContext sslcontext = SSLContext.getInstance(<span class="string">&quot;SSL&quot;</span>,<span class="string">&quot;SunJSSE&quot;</span>);</span><br><span class="line">        sslcontext.init(<span class="keyword">null</span>, <span class="keyword">new</span> TrustManager[]&#123;<span class="keyword">new</span> MyX509TrustManager()&#125;, <span class="keyword">new</span> java.security.SecureRandom());</span><br><span class="line">        URL url = <span class="keyword">new</span> URL(<span class="string">&quot;https://xxxx&quot;</span>);</span><br><span class="line">        HostnameVerifier ignoreHostnameVerifier = <span class="keyword">new</span> HostnameVerifier() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">verify</span><span class="params">(String s, SSLSession sslsession)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;WARNING: Hostname is not matched for cert.&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        HttpsURLConnection.setDefaultHostnameVerifier(ignoreHostnameVerifier);</span><br><span class="line">        HttpsURLConnection.setDefaultSSLSocketFactory(sslcontext.getSocketFactory());</span><br><span class="line">        <span class="comment">//之后任何Https协议网站皆能正常访问，同第一种情况</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>java</code>代码中加载证书，必须使用<code>HttpsURLConnection</code>方式</p>
+<p>从网站开发者出获取生成证书的密钥库<code>cacert.keystore</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.security.KeyStore;</span><br><span class="line"><span class="keyword">import</span> java.security.cert.CertificateException;</span><br><span class="line"><span class="keyword">import</span> java.security.cert.X509Certificate;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.TrustManager;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.TrustManagerFactory;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.X509TrustManager;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyX509TrustManager</span> <span class="keyword">implements</span> <span class="title">X509TrustManager</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * The default X509TrustManager returned by SunX509.  We&#x27;ll delegate</span></span><br><span class="line"><span class="comment">     * decisions to it, and fall back to the logic in this class if the</span></span><br><span class="line"><span class="comment">     * default X509TrustManager doesn&#x27;t trust it.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    X509TrustManager sunJSSEX509TrustManager;</span><br><span class="line">    MyX509TrustManager() <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">// create a &quot;default&quot; JSSE X509TrustManager.</span></span><br><span class="line">        KeyStore ks = KeyStore.getInstance(<span class="string">&quot;JKS&quot;</span>);</span><br><span class="line">        ks.load(<span class="keyword">new</span> FileInputStream(<span class="string">&quot;cancert.keystore&quot;</span>),</span><br><span class="line">                <span class="string">&quot;changeit&quot;</span>.toCharArray());</span><br><span class="line">        TrustManagerFactory tmf =</span><br><span class="line">                TrustManagerFactory.getInstance(<span class="string">&quot;SunX509&quot;</span>, <span class="string">&quot;SunJSSE&quot;</span>);</span><br><span class="line">        tmf.init(ks);</span><br><span class="line">        TrustManager tms [] = tmf.getTrustManagers();</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">             * Iterate over the returned trustmanagers, look</span></span><br><span class="line"><span class="comment">             * for an instance of X509TrustManager.  If found,</span></span><br><span class="line"><span class="comment">             * use that as our &quot;default&quot; trust manager.</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tms.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (tms[i] <span class="keyword">instanceof</span> X509TrustManager) &#123;</span><br><span class="line">                sunJSSEX509TrustManager = (X509TrustManager) tms[i];</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">             * Find some other way to initialize, or else we have to fail the</span></span><br><span class="line"><span class="comment">             * constructor.</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">&quot;Couldn&#x27;t initialize&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * Delegate to the default trust manager.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkClientTrusted</span><span class="params">(X509Certificate[] chain, String authType)</span></span></span><br><span class="line"><span class="function">            <span class="keyword">throws</span> CertificateException </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            sunJSSEX509TrustManager.checkClientTrusted(chain, authType);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (CertificateException excep) &#123;</span><br><span class="line">            <span class="comment">// do any special handling here, or rethrow exception.</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * Delegate to the default trust manager.</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkServerTrusted</span><span class="params">(X509Certificate[] chain, String authType)</span></span></span><br><span class="line"><span class="function">            <span class="keyword">throws</span> CertificateException </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            sunJSSEX509TrustManager.checkServerTrusted(chain, authType);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (CertificateException excep) &#123;</span><br><span class="line">                <span class="comment">/*</span></span><br><span class="line"><span class="comment">                 * Possibly pop up a dialog box asking whether to trust the</span></span><br><span class="line"><span class="comment">                 * cert chain.</span></span><br><span class="line"><span class="comment">                 */</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * Merely pass this through.</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">    <span class="keyword">public</span> X509Certificate[] getAcceptedIssuers() &#123;</span><br><span class="line">        <span class="keyword">return</span> sunJSSEX509TrustManager.getAcceptedIssuers();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        SSLContext sslcontext = SSLContext.getInstance(<span class="string">&quot;SSL&quot;</span>,<span class="string">&quot;SunJSSE&quot;</span>);</span><br><span class="line">        sslcontext.init(<span class="keyword">null</span>, <span class="keyword">new</span> TrustManager[]&#123;<span class="keyword">new</span> MyX509TrustManager()&#125;, <span class="keyword">new</span> java.security.SecureRandom());</span><br><span class="line">        URL serverUrl = <span class="keyword">new</span> URL(<span class="string">&quot;https://xxxx&quot;</span>);</span><br><span class="line">        HttpsURLConnection conn = (HttpsURLConnection) serverUrl.openConnection();</span><br><span class="line">        conn.setSSLSocketFactory(sslcontext.getSocketFactory());</span><br><span class="line">        conn.setRequestMethod(<span class="string">&quot;GET&quot;</span>);</span><br><span class="line">        conn.setRequestProperty(<span class="string">&quot;Content-type&quot;</span>, <span class="string">&quot;application/json&quot;</span>);</span><br><span class="line">        <span class="comment">//必须设置false，否则会自动redirect到重定向后的地址</span></span><br><span class="line">        conn.setInstanceFollowRedirects(<span class="keyword">false</span>);</span><br><span class="line">        conn.connect();</span><br><span class="line">        String result = getReturn(conn);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getReturn</span><span class="params">(HttpsURLConnection connection)</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">        StringBuffer buffer = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="comment">//将返回的输入流转换成字符串</span></span><br><span class="line">        <span class="keyword">try</span>(InputStream inputStream = connection.getInputStream();</span><br><span class="line">            InputStreamReader inputStreamReader = <span class="keyword">new</span> InputStreamReader(inputStream, ConstantInfo.CHARSET);</span><br><span class="line">            BufferedReader bufferedReader = <span class="keyword">new</span> BufferedReader(inputStreamReader);)&#123;</span><br><span class="line">            String str = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">while</span> ((str = bufferedReader.readLine()) != <span class="keyword">null</span>) &#123;</span><br><span class="line">                buffer.append(str);</span><br><span class="line">            &#125;</span><br><span class="line">            String result = buffer.toString();</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+        <category>Https</category>
+      </categories>
   </entry>
   <entry>
     <title>Chia正式网络水龙头免费领取XCH</title>
@@ -354,135 +537,6 @@
         <category>BlockChain</category>
         <category>Bitcoin</category>
         <category>Omni</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Linux 格式化数据盘 挂载数据盘</title>
-    <url>/2021/08/11/abp0013/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
-<p>很多小伙伴使用Linux都会面临系统盘磁盘空间不够用的情况，这种时候就需要添加数据盘并且挂载上去使用</p>
-</blockquote>
-<hr>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>远程连接实例</p>
-<p>运行 <code>fdisk -l</code> 命令查看实例是否有数据盘。如果执行命令后，没有发现 <code>/dev/vdb</code>，表示您的实例没有数据盘，无需格式化数据盘，请忽略本文后续内容。</p>
-<p>创建一个单分区数据盘，依次执行以下命令：</p>
-<ul>
-<li>运行 <code>fdisk /dev/vdb</code>：分区数据盘。</li>
-<li>输入 <code>n</code> 并按回车键：创建一个新分区。</li>
-<li>输入 <code>p</code> 并按回车键：选择主分区。因为创建的是一个单分区数据盘，所以只需要创建主分区。</li>
-<li>输入分区编号并按回车键。因为这里仅创建一个分区，可以输入 <code>1</code>。</li>
-<li>输入第一个可用的扇区编号：按回车键采用默认值 <code>1</code>。</li>
-<li>输入最后一个扇区编号：因为这里仅创建一个分区，所以按回车键采用默认值。</li>
-<li>输入 <code>wq</code> 并按回车键，开始分区。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># fdisk /dev/vdb</span></span><br><span class="line">Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel</span><br><span class="line">Building a new DOS disklabel with disk identifier 0x5f46a8a2.</span><br><span class="line">Changes will remain <span class="keyword">in</span> memory only, until you decide to write them.</span><br><span class="line">After that, of course, the previous content won<span class="string">&#x27;t be recoverable.</span></span><br><span class="line"><span class="string">Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)</span></span><br><span class="line"><span class="string">WARNING: DOS-compatible mode is deprecated. It&#x27;</span>s strongly recommended to</span><br><span class="line">switch off the mode (<span class="built_in">command</span> <span class="string">&#x27;c&#x27;</span>) and change display units to</span><br><span class="line">sectors (<span class="built_in">command</span> <span class="string">&#x27;u&#x27;</span>).</span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): n</span><br><span class="line">Command action</span><br><span class="line">e extended</span><br><span class="line">p primary partition (1-4)</span><br><span class="line">p</span><br><span class="line">Partition number (1-4): 1</span><br><span class="line">First cylinder (1-41610, default 1): 1</span><br><span class="line">Last cylinder, +cylinders or +size&#123;K,M,G&#125; (1-41610, default 41610):</span><br><span class="line">Using default value 41610</span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): wq</span><br><span class="line">The partition table has been altered!</span><br><span class="line">Calling ioctl() to re-read partition table.</span><br><span class="line">Syncing disks.</span><br></pre></td></tr></table></figure>
-
-<p>查看新的分区：运行命令 <code>fdisk -l</code>。如果出现以下信息，说明已经成功创建了新分区 <code>/dev/vdb1</code>。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># fdisk -l</span></span><br><span class="line">Disk /dev/vda: 42.9 GB, 42949672960 bytes</span><br><span class="line">255 heads, 63 sectors/track, 5221 cylinders</span><br><span class="line">Units = cylinders of 16065 * 512 = 8225280 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x00053156</span><br><span class="line">Device Boot Start End Blocks Id System</span><br><span class="line">/dev/vda1 * 1 5222 41942016 83 Linux</span><br><span class="line">Disk /dev/vdb: 21.5 GB, 21474836480 bytes</span><br><span class="line">16 heads, 63 sectors/track, 41610 cylinders</span><br><span class="line">Units = cylinders of 1008 * 512 = 516096 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x5f46a8a2</span><br><span class="line">Device Boot Start End Blocks Id System</span><br><span class="line">/dev/vdb1 1 41610 20971408+ 83 Linux</span><br></pre></td></tr></table></figure>
-
-<p>在新分区上创建一个文件系统：运行命令 <code>mkfs.ext3 /dev/vdb1</code>。</p>
-<p>本示例要创建一个 <code>ext3</code> 文件系统。您也可以根据自己的需要，选择创建其他文件系统，例如，如果需要在 Linux、Windows 和 Mac 系统之间共享文件，您可以使用 <code>mkfs.vfat</code> 创建 VFAT 文件系统。</p>
-<p>创建文件系统所需时间取决于数据盘大小。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># mkfs.ext3 /dev/vdb1</span></span><br><span class="line">mke2fs 1.41.12 (17-May-2010)</span><br><span class="line">Filesystem label=</span><br><span class="line">OS <span class="built_in">type</span>: Linux</span><br><span class="line">Block size=4096 (<span class="built_in">log</span>=2)</span><br><span class="line">Fragment size=4096 (<span class="built_in">log</span>=2)</span><br><span class="line">Stride=0 blocks, Stripe width=0 blocks</span><br><span class="line">1310720 inodes, 5242852 blocks</span><br><span class="line">262142 blocks (5.00%) reserved <span class="keyword">for</span> the super user</span><br><span class="line">First data block=0</span><br><span class="line">Maximum filesystem blocks=4294967296</span><br><span class="line">160 block groups</span><br><span class="line">32768 blocks per group, 32768 fragments per group</span><br><span class="line">8192 inodes per group</span><br><span class="line">Superblock backups stored on blocks:</span><br><span class="line">32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,</span><br><span class="line">4096000</span><br><span class="line">Writing inode tables: <span class="keyword">done</span></span><br><span class="line">Creating journal (32768 blocks): <span class="keyword">done</span></span><br><span class="line">Writing superblocks and filesystem accounting information: <span class="keyword">done</span></span><br><span class="line">This filesystem will be automatically checked every 37 mounts or</span><br><span class="line">180 days, whichever comes first. Use tune2fs -c or -i to override.</span><br></pre></td></tr></table></figure>
-
-<p>（建议）备份 etc/fstab：运行命令 <code>cp /etc/fstab /etc/fstab.bak</code>。</p>
-<p>向 <code>/etc/fstab</code> 写入新分区信息：运行命令 <code>echo /dev/vdb1 /mnt ext3 defaults 0 0 &gt;&gt; /etc/fstab</code>。如果需要把数据盘单独挂载到某个文件夹，比如单独用来存放网页，请将以上命令 <code>/mnt</code> 替换成所需的挂载点路径。</p>
-<p>查看 <code>/etc/fstab</code> 中的新分区信息：运行命令 <code>cat /etc/fstab</code>。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># cat /etc/fstab</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># /etc/fstab</span></span><br><span class="line"><span class="comment"># Created by anaconda on Thu Feb 23 07:28:22 2017</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Accessible filesystems, by reference, are maintained under &#x27;/dev/disk&#x27;</span></span><br><span class="line"><span class="comment"># See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">UUID=3d083579-f5d9-4df5-9347-8d27925805d4 / ext4 defaults 1 1</span><br><span class="line">tmpfs /dev/shm tmpfs defaults 0 0</span><br><span class="line">devpts /dev/pts devpts gid=5,mode=620 0 0</span><br><span class="line">sysfs /sys sysfs defaults 0 0</span><br><span class="line">proc /proc proc defaults 0 0</span><br><span class="line">/dev/vdb1 /mnt ext3 defaults 0 0</span><br></pre></td></tr></table></figure>
-
-
-
-<p>挂载文件系统：运行命令 <code>mount /dev/vdb1 /mnt</code>。</p>
-<p>查看目前磁盘空间和使用情况：运行命令 <code>df -h</code>。如果出现新建文件系统的信息，说明挂载成功，可以使用新的文件系统了。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@iXXXXXXX ~]<span class="comment"># mount /dev/vdb1 /mnt</span></span><br><span class="line">[root@iXXXXXXX ~]<span class="comment"># df -h</span></span><br><span class="line">Filesystem Size Used Avail Use% Mounted on</span><br><span class="line">/dev/vda1 40G 6.6G 31G 18% /</span><br><span class="line">tmpfs 499M 0 499M 0% /dev/shm</span><br><span class="line">/dev/vdb1 20G 173M 19G 1% /mnt</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Docker查看容器资源占用情况</title>
-    <url>/2021/08/11/abp0014/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
-<p>有些时候<code>Docker</code>集群项目出现问题，需要快速查找问题所在，这种时候首先就需要查看<code>Docker</code>的各个容器是否有资源使用不正常的情况</p>
-</blockquote>
-<hr>
-<h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><p>使用<code>docker stats</code> 命令用来显示容器使用的系统资源。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats</span><br></pre></td></tr></table></figure>
-
-<p>默认输出</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">CONTAINER           CPU %               MEM USAGE / LIMIT       MEM %               NET I/O             BLOCK I/O           PIDS</span><br><span class="line">d7ef5139ea28        0.10%               273.3 MiB / 1.796 GiB   14.86%              302 MB / 305 MB     269 MB / 0 B        29</span><br><span class="line">083e9f44bf1b        0.00%               5.859 MiB / 1.796 GiB   0.32%               3.05 GB / 3.07 GB   339 MB / 0 B        9</span><br><span class="line">996236181fa3        0.50%               11.79 MiB / 1.796 GiB   0.64%               3.39 GB / 4.04 GB   183 MB / 0 B        9</span><br><span class="line">1b610486dbcf        0.00%               43.05 MiB / 1.796 GiB   2.34%               1.33 GB / 488 MB    21.3 GB / 248 MB    16</span><br><span class="line">3934362529c3        0.03%               280.1 MiB / 1.796 GiB   15.23%              567 MB / 1.16 GB    6.91 GB / 517 MB    39</span><br></pre></td></tr></table></figure>
-
-<p>可以看到输出上面内容的情况下，会每隔1秒钟刷新一次输出的内容。按下 <kbd>Ctrl</kbd>+<kbd>C</kbd> 可以结束。下面是输出的内容的说明：</p>
-<ul>
-<li>[CONTAINER]：以短格式显示容器的 ID。</li>
-<li>[CPU %]：CPU 的使用情况。</li>
-<li>[MEM USAGE / LIMIT]：当前使用的内存和最大可以使用的内存。</li>
-<li>[MEM %]：以百分比的形式显示内存使用情况。</li>
-<li>[NET I/O]：网络 I/O 数据。</li>
-<li>[BLOCK I/O]：磁盘 I/O 数据。</li>
-<li>[PIDS]：PID 号。</li>
-</ul>
-<p>如果只需要查看当时状态，可以使用<code>--no-stream</code>，输出之后命令行会自动结束</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats --no-stream</span><br></pre></td></tr></table></figure>
-
-<p>很明显按照上面这种情况，如果容器太多了，我们很难去对应是输出的哪一个容器的信息。这个时候就需要使用<code>--format</code>将返回结果按照自己需要的内容输出</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats --format <span class="string">&quot;table &#123;&#123;.Container&#125;&#125;\t&#123;&#123;.Name&#125;&#125;\t&#123;&#123;.CPUPerc&#125;&#125;\t&#123;&#123;.MemUsage&#125;&#125;\t&#123;&#123;.NetIO&#125;&#125;\t&#123;&#123;.BlockIO&#125;&#125;\t&#123;&#123;.MemPerc&#125;&#125;\t&#123;&#123;.PIDs&#125;&#125;&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>这样就能很容易的对应自己设置容器名称</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">CONTAINER           NAME                CPU %               MEM USAGE / LIMIT       NET I/O             BLOCK I/O           MEM %               PIDS</span><br><span class="line">d7ef5139ea28        blog                0.12%               273.3 MiB / 1.796 GiB   304 MB / 306 MB     269 MB / 0 B        14.86%              29</span><br><span class="line">083e9f44bf1b        v2ray-usa           0.00%               5.977 MiB / 1.796 GiB   3.05 GB / 3.07 GB   339 MB / 0 B        0.32%               9</span><br><span class="line">996236181fa3        v2ray               0.40%               11.8 MiB / 1.796 GiB    3.41 GB / 4.06 GB   183 MB / 0 B        0.64%               9</span><br><span class="line">1b610486dbcf        gogs                0.00%               43.02 MiB / 1.796 GiB   1.33 GB / 488 MB    21.3 GB / 248 MB    2.34%               16</span><br><span class="line">3934362529c3        mysql               0.04%               280.1 MiB / 1.796 GiB   567 MB / 1.16 GB    6.91 GB / 517 MB    15.23%              39</span><br></pre></td></tr></table></figure>
-<p>下面是<code>--format</code>可自定义的占位符</p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>.Container</code></td>
-<td align="left">容器的名称或 ID</td>
-</tr>
-<tr>
-<td><code>.Name</code></td>
-<td align="left">容器名称</td>
-</tr>
-<tr>
-<td><code>.ID</code></td>
-<td align="left">容器 ID</td>
-</tr>
-<tr>
-<td><code>.CPUPerc</code></td>
-<td align="left">CPU 使用率</td>
-</tr>
-<tr>
-<td><code>.MemUsage</code></td>
-<td align="left">内存使用量</td>
-</tr>
-<tr>
-<td><code>.NetIO</code></td>
-<td align="left">网络 I/O</td>
-</tr>
-<tr>
-<td><code>.BlockIO</code></td>
-<td align="left">磁盘 I/O</td>
-</tr>
-<tr>
-<td><code>.MemPerc</code></td>
-<td align="left">内存使用率</td>
-</tr>
-<tr>
-<td><code>.PIDs</code></td>
-<td align="left">PID 号</td>
-</tr>
-</tbody></table>
-<p>有些时候为了方便处理，也可以将<code>--format</code>按照<code>json</code>格式输出</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stats --no-stream --format <span class="string">&quot;&#123;\&quot;container\&quot;:\&quot;&#123;&#123; .Container &#125;&#125;\&quot;,\&quot;memory\&quot;:&#123;\&quot;raw\&quot;:\&quot;&#123;&#123; .MemUsage &#125;&#125;\&quot;,\&quot;percent\&quot;:\&quot;&#123;&#123; .MemPerc &#125;&#125;\&quot;&#125;,\&quot;cpu\&quot;:\&quot;&#123;&#123; .CPUPerc &#125;&#125;\&quot;&#125;&quot;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;d7ef5139ea28&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;273.3 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;14.86%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.10%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;083e9f44bf1b&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;6.078 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;0.33%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.00%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;996236181fa3&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;11.88 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;0.65%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.31%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;1b610486dbcf&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;42.93 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;2.33%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.00%&quot;</span>&#125;</span><br><span class="line">&#123;<span class="string">&quot;container&quot;</span>:<span class="string">&quot;3934362529c3&quot;</span>,<span class="string">&quot;memory&quot;</span>:&#123;<span class="string">&quot;raw&quot;</span>:<span class="string">&quot;280.1 MiB / 1.796 GiB&quot;</span>,<span class="string">&quot;percent&quot;</span>:<span class="string">&quot;15.23%&quot;</span>&#125;,<span class="string">&quot;cpu&quot;</span>:<span class="string">&quot;0.04%&quot;</span>&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Docker</category>
-        <category>Linux</category>
       </categories>
   </entry>
 </search>

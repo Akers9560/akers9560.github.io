@@ -557,4 +557,25 @@
         <category>Ubuntu</category>
       </categories>
   </entry>
+  <entry>
+    <title>收藏实用工具</title>
+    <url>/2021/09/02/abp0018/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>记录一些平时使用到的实用工具</p>
+<hr>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><ul>
+<li><p>美国地址生成器，可以随机生成美国地址，可用于注册亚马逊、苹果ID等</p>
+<p><a href="https://www.meiguodizhi.com/">美国地址生成器</a></p>
+</li>
+</ul>
+<ul>
+<li><p>Unicode字符工具</p>
+<p><a href="https://unicode-table.com/cn/">Unicode字符工具</a><br><a href="https://unicode-table.com/cn/tools/flip/">将文字和字母倒转的工具</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+  </entry>
 </search>

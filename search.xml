@@ -578,4 +578,45 @@
         <category>工具</category>
       </categories>
   </entry>
+  <entry>
+    <title>Ubuntu20.04使用python报错ImportError No module named requests</title>
+    <url>/2021/09/14/abp0020/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p><code>Ubuntu</code>安装<code>python</code>之后，导入<code>requests</code>模块报错ImportError: No module named requests，使用<code>pip install requests</code>安装成功但是使用的时候依然报错</p>
+<p>这个时候需要使用<code>python2.7 pip</code>代替默认<code>pip</code></p>
+<hr>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><ol>
+<li><p><code>$PATH</code>变量中的某个位置应安装一个名为<code>pip2.7</code>的二进制文件。可以使用下面的命令查找</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">which</span> pip2.7</span><br></pre></td></tr></table></figure></li>
+<li><p>这应该在标准输出上打印<code>/usr/local/bin/pip2.7</code>之类的内容。 如果它不打印任何类似内容，则表示未安装。 在这种情况下，请通过运行安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/pip/2.7/get-pip.py</span><br><span class="line">sudo python2.7 get-pip.py</span><br></pre></td></tr></table></figure></li>
+<li><p>再次查看应该会打印<code>/usr/local/bin/pip2.7</code>，说明替换成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">which</span> pip2.7</span><br></pre></td></tr></table></figure></li>
+<li><p>使用<code>pip2.7</code>安装<code>requests</code>模块，<code>python</code>命令已经可以使用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip2.7 install requests</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux查询当前工作目录下的所有目录（文件夹）</title>
+    <url>/2021/09/14/abp0019/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>查询当前工作目录下的所有目录（文件夹）</p>
+<hr>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><ol>
+<li><p>如果当前目录下面全是文件夹，在每个文件夹下创建一个<code>logs</code>目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> `ls`</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">mkdir -p <span class="variable">$x</span>/logs</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></li>
+<li><p>如果当前目录下面不全是文件夹，在每个文件夹下创建一个<code>logs</code>目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> `ls -F | grep <span class="string">&#x27;/$&#x27;</span>`</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">mkdir -p <span class="variable">$x</span><span class="string">&quot;&quot;</span>logs</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Ubuntu</category>
+      </categories>
+  </entry>
 </search>

@@ -619,4 +619,27 @@
         <category>Ubuntu</category>
       </categories>
   </entry>
+  <entry>
+    <title>Nodejs安装http-server启动本地服务</title>
+    <url>/2021/09/17/abp0021/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>在本地调试<code>html</code>静态文件的时候，通常会遇到<code>js</code>加载或者跨域问题，这个时候就需要本地启动一个服务，通常情况下使用<code>http-server</code>是最方便快捷的</p>
+<hr>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><ol>
+<li><p>查看<code>nodejs</code>是否安装，如果没安装请先下载安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure></li>
+<li><p>安装<code>http-server</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g http-server</span><br></pre></td></tr></table></figure></li>
+<li><p>进入需要访问的目录，比如我是将随意一个<code>index.html</code>放在桌面<code>C:\Users\Administrator\Desktop</code>下，我们将要访问这个<code>index.html</code>文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\Users\Administrator\Desktop</span><br></pre></td></tr></table></figure></li>
+<li><p>启动<code>http-server</code>服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http-server</span><br></pre></td></tr></table></figure></li>
+<li><p>出现下面的内容之后，可选择一个路径进行访问</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Available on:</span><br><span class="line">  http://172.19.160.1:8080</span><br><span class="line">  http://192.169.8.138:8080</span><br><span class="line">  http://192.168.15.1:8080</span><br><span class="line">  http://192.168.6.1:8080</span><br><span class="line">  http://127.0.0.1:8080</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+  </entry>
 </search>

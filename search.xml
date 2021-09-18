@@ -192,29 +192,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Vim专题使用及详解</title>
-    <url>/2021/08/12/abp0015/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
-<p>由于在服务器的使用当中，有些时候需要在服务器上面直接修改一些内容，有个强大的工具叫<code>Vim</code>，但是<code>Vim</code>的使用又非常复杂，这里做一篇专门的教程记录一些平时常需要用到的功能。</p>
-</blockquote>
-<hr>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
-<li>Ubuntu<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install vim</span><br></pre></td></tr></table></figure></li>
-<li>CentOS<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install vim</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="简单模式"><a href="#简单模式" class="headerlink" title="简单模式"></a>简单模式</h3><ul>
-<li>直接打开一个文件的编辑模式<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim &lt;filename&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<hr>
-<p>未完待续…</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>Vim</category>
-      </categories>
-  </entry>
-  <entry>
     <title>关于JAVA发送Https请求（HttpsURLConnection和HttpURLConnection）</title>
     <url>/2021/08/13/abp0016/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
@@ -640,6 +617,68 @@
 ]]></content>
       <categories>
         <category>Nodejs</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>WPS Excel专题使用及详解</title>
+    <url>/2021/09/18/abp0022/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>记录一些WPS Excel中经常需要用到的功能</p>
+<hr>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><h4 id="VLOOKUP"><a href="#VLOOKUP" class="headerlink" title="VLOOKUP"></a>VLOOKUP</h4><p><code>VLOOKUP</code>可以用来核对数据，多个表格之间快速导入数据等函数功能。功能是按列查找，最终返回该列所需查询序列所对应的值；与之对应的<code>HLOOKUP</code>是按行查找的。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">VLOOKUP (lookup_value, table_array, col_index_num, [range_lookup])</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<blockquote>
+<ul>
+<li><code>Lookup_value</code>为需要在数据表第一列中进行查找的数值。<code>Lookup_value</code>可以为数值、引用或文本字符串。<br>当<code>vlookup</code>函数第一参数省略查找值时，表示用0查找。</li>
+<li><code>Table_array</code>为需要在其中查找数据的数据表。使用对区域或区域名称的引用。</li>
+<li><code>col_index_num</code>为<code>table_array</code>中查找数据的数据列序号。<code>col_index_num</code>为<code>1</code>时，返回<code>table_array</code>第一列的数值，<br><code>col_index_num</code>为<code>2</code>时，返回<code>table_array</code>第二列的数值，以此类推。<br>如果<code>col_index_num</code>小于<code>1</code>，函数<code>VLOOKUP</code>返回错误值<code>#VALUE!</code>；<br>如果<code>col_index_num</code>大于<code>table_array</code>的列 数，函数<code>VLOOKUP</code>返回错误值<code>#REF!</code>。</li>
+<li><code>Range_lookup</code>为一逻辑值，指明函数<code>VLOOKUP</code>查找时是精确匹配，还是近似匹配。<br>如果为FALSE或0，则返回精确匹配，如果找不到，则返回错误值<code>#N/A</code>。<br>如果<code>range_lookup</code>为<code>TRUE</code>或<code>1</code>，函数<code>VLOOKUP</code>将查找近似匹配值，也就是说，如果找不到精确匹配值，则返回小于<code>lookup_value</code>的最大数值。<br>如果<code>range_lookup</code>省略，则默认为<code>1</code>。</li>
+</ul>
+</blockquote>
+</blockquote>
+<ol>
+<li><p>首先拿到两组数据如下<br><img src="vlookup_1.png" alt="门牌号和户主名"><img src="vlookup_2.png" alt="门牌号和人口数"></p>
+</li>
+<li><p>把这两组数据通过门牌号组合在一起</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">=VLOOKUP(D2,I:J,2,FALSE)</span><br></pre></td></tr></table></figure>
+<p><img src="vlookup_3.png" alt="VLOOKUP函数"></p>
+</li>
+<li><p>按下回车之后，就会出现第一个匹配结果<br><img src="vlookup_4.png" alt="VLOOKUP函数结果"></p>
+</li>
+<li><p>这时在函数单元格使用<strong>填充柄</strong>填充其他单元格即可完成操作<br><img src="vlookup_5.png" alt="VLOOKUP函数结果填充"></p>
+</li>
+</ol>
+<p>未完待续…</p>
+]]></content>
+      <categories>
+        <category>WPS</category>
+        <category>Excel</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Vim专题使用及详解</title>
+    <url>/2021/08/12/abp0015/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><blockquote>
+<p>由于在服务器的使用当中，有些时候需要在服务器上面直接修改一些内容，有个强大的工具叫<code>Vim</code>，但是<code>Vim</code>的使用又非常复杂，这里做一篇专门的教程记录一些平时常需要用到的功能。</p>
+</blockquote>
+<hr>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li>Ubuntu<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install vim</span><br></pre></td></tr></table></figure></li>
+<li>CentOS<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install vim</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="简单模式"><a href="#简单模式" class="headerlink" title="简单模式"></a>简单模式</h3><ul>
+<li>直接打开一个文件的编辑模式<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim &lt;filename&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<p>未完待续…</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Vim</category>
       </categories>
   </entry>
 </search>
